@@ -15,7 +15,7 @@ bot.on('ready', function() {
 
 bot.on('message', function (message) {
     if (message.content === 'h$help') {
-      message.channel.send({embed: { color: 0xFF0000, description: "**Commands:**\n*command privé:*\nh$annonce : écrit ton annonce, il s'affichera dans tous les serveur." }}) 
+      message.channel.send({embed: { color: 0xFF0000, description: "**Commands:**\n**command privé:**\nh$annonce : écrit ton annonce, il s'affichera dans tous les serveur." }}) 
     }
 })
 
