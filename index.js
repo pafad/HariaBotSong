@@ -15,7 +15,7 @@ bot.on('ready', function() {
 
 bot.on('message', function (message) {
     if (message.content === 'h$help') {
-      message.channel.send({embed: { color: 0xFF0000, description: "**Command Fonda/Admin:**\nh$annonce : ecrit ton annonce" }}) 
+      message.channel.send({embed: { color: 0xFF0000, description: "**Commands:**\n*command privé:*\nh$annonce : écrit ton annonce, il s'affichera dans tous les serveur." }}) 
     }
 })
 
@@ -23,7 +23,7 @@ bot.on('message', function (message) {
 
 
 bot.on('message', function (message) {
-  if(message.content.startsWith('h$annonce')&&message.author.id=='300896265078571009 ; 283144121718276096') {
+  if(message.content.startsWith('h$annonce')&&message.author.id=='300896265078571009, 283144121718276096') {
       serv = bot.guilds.array()
       text = message.content.substr(9)
       for(i=0;i<serv.length;i++){
