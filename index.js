@@ -22,14 +22,6 @@ bot.on('message', function (message) {
 //                             CODE DU BOT ( COMMAND )
 
 
-var id_owner = '300896265078571009';
-var id_conj = '283144121718276096';
-
-if (message.content == 'h$perm' && (message.author.id == id_owner || message.author.id == id_conj)){
-
-}
-
-
 bot.on('message', function (message) {
   if(message.content.startsWith('h$annonce')&&message.author.id=='300896265078571009')
  {
