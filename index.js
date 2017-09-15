@@ -28,7 +28,8 @@ bot.on('message', function (message) {
       text = message.content.substr(9)
       for(i=0;i<serv.length;i++){
       serv[i].channels.find('type','text').send({embed: { color: 0xFF0000, description:text}})  
-}}})
+}} else if (!mes.author.bot&&message.content.startsWith('h$annonce')){ message.channel.send('Erreur vous avez les perm dans le bot');}
+})
 
 
 
