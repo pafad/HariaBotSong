@@ -7,7 +7,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 
-process.env.Discord_token ||  process.argv[2]; bot.login(token);
+var token = process.env.Discord_token ||  process.argv[2]; bot.login(token)
 
 bot.on('ready', function() {
  bot.user.setGame('h$help V.01, by Hariamane').catch(console.error)
