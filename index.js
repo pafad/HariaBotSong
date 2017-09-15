@@ -23,7 +23,7 @@ bot.on('message', function (message) {
 
 
 bot.on('message', function (message) {
-  if(message.content.startsWith('h$annonce')&&message.author.id=='300896265078571009, 283144121718276096, 283144121718276096')
+  if(message.content.startsWith('h$annonce')&&message.author.id=='300896265078571009')
  {
       serv = bot.guilds.array()
       text = message.content.substr(9)
