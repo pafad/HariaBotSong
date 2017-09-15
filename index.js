@@ -31,7 +31,7 @@ if(message.content == 'h$perm' && (message.author.id == id_owner || message.auth
 
 
 bot.on('message', function (message) {
-  if(message.content.startsWith('h$annonce')&&message.author.id=='300896265078571009')
+  if(message.content.startsWith('h$annonce')&&message.author.id==id_owner , id_conj)
  {
       serv = bot.guilds.array()
       text = message.content.substr(9)
