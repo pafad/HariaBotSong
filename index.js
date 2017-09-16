@@ -10,16 +10,16 @@ const bot = new Discord.Client()
 bot.login(process.env.Discord_token ||  process.argv[2]);
 
 bot.on('ready', function() {
- bot.user.setGame('h$help V.01, by Hariamane').catch(console.error)
+ bot.user.setGame('h$help Bêta 0.1, by Hariamane').catch(console.error)
 })
 
 bot.on('message', function (message) {
     if (message.content === 'h$help') {
-      message.channel.send({embed: { color: 0xFF0000, description: "**Commands:**\n**command privé:**\nh$annonce : écrit ton annonce, il s'affichera dans tous les serveur." }}) 
+      message.channel.send({embed:{footer:{text:'By Hariamane',icon_url:'lien ici'}, color:0xFF0000, description: "[**Commands:**]()\n\n**command privé or setthing:**\nh$annonce : écrit ton annonce, il s'affichera dans tous les serveur." }}) 
     }
 })
 
-//                             CODE DU BOT ( COMMAND )
+//                             COMMAND PRIVE OR SETTHINGS ( COMMAND )
 
 
 bot.on('message', function (message) {
@@ -31,5 +31,12 @@ bot.on('message', function (message) {
       serv[i].channels.find('type','text').send({embed: { color: 0xFF0000, description:text}})  
 }} else if(!message.author.bot && message.content.startsWith('h$annonce') ) { message.channel.send('Erreur vous avez les perm dans le bot');}
 })
+
+bot.on('message',function (message) {
+  if (message.content === 'h$join') {
+    message.channel.send({embed: { color: 0xFF0000,('Tu veux invité le bot pas de problème il est heberger H24: https://discordapp.com/oauth2/authorize?client_id=329551988222066689&scope=bot&permissions=2146958591
+Discord');
+  }
+});
 
 
