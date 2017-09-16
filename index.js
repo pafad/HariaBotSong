@@ -15,7 +15,7 @@ bot.on('ready', function() {
 
 bot.on('message', function (message) {
     if (message.content === 'h$help') {
-      message.channel.send({embed:{footer:{text:'By Hariamane',icon_url:' https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128'}, color:0xFF0000, description: "[**Commandes:**]()\n\n**commandes privées or setthing:**\nh$annonce :  Cette commande te permet de pub pour ton discord. Il s'affiche sur tous les serveurs dont le bot en fait partie. \nh$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\nh$discord : Cette commande te permet de me rejoindre.\n:x:h$contact : Cette commande te permet de contacter le support technique du bot." }}) 
+      message.channel.send({embed:{footer:{text:'By Hariamane',icon_url:' https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128'}, color:0xFF0000, description: "[**Commandes:**]()\n\n**commandes utils**\n:vrai:h$annonce :  Cette commande te permet de pub pour ton discord. Il s'affiche sur tous les serveurs dont le bot en fait partie. \n:vrai:h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n:vrai:h$discord : Cette commande te permet de me rejoindre.\n:x:h$contact : Cette commande te permet de contacter le support technique du bot." }}) 
     }
 })
 
@@ -30,7 +30,7 @@ bot.on('message', function (message) {
       text = message.content.substr(9)
       for(i=0;i<serv.length;i++){
       serv[i].channels.find('type','text').send({embed: { color: 0xFF0000, description:text}})  
-}} else if(!message.author.bot && message.content.startsWith('h$annonce') ) { message.channel.send({embed: { color: 0xFF0000, description:'**:x:Erreur**\nVous pouvez pas utiliser la commande, demander au développer de vous ajouter dans le bot [identifiant]'}});}
+}} else if(!message.author.bot && message.content.startsWith('h$annonce') ) { message.channel.send({embed: { color: 0xFF0000, description:'**:x:Erreur**\nVous êtes pas dans la liste des [identifiant], demander une withlist avec h$discord, merci.'}});}
 })
 
 bot.on('message',function (message) {
