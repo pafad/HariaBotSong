@@ -15,7 +15,7 @@ bot.on('ready', function() {
 
 bot.on('message', function (message) {
     if (message.content === 'h$help') {
-      message.channel.send({embed:{footer:{text:'By Hariamane',icon_url:' https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128'}, color:0xFF0000, description: "[**Commandes:**]()\n\n**commandes utils:**\n\n✔h$annonce :  Cette commande te permet de pub pour ton discord. Il s'affiche sur tous les serveurs dont le bot en fait partie. \n✔h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n✔h$discord : Cette commande te permet de me rejoindre.\n:x:h$contact : Cette commande te permet de contacter le support technique du bot.\n\n**Commandes Jeux:**\nh$ping" }}) 
+      message.channel.send({embed:{footer:{text:'By Hariamane',icon_url:' https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128'}, color:0xFF0000, description: "[**Commandes:**]()\n\n**commandes utils:**\n\n✔h$annonce :  Cette commande te permet de pub pour ton discord. Il s'affiche sur tous les serveurs dont le bot en fait partie. \n✔h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n✔h$discord : Cette commande te permet de me rejoindre.\n:x:h$contact : Cette commande te permet de contacter le support technique du bot.\n\n**Commandes Jeux:**\n✔h$ping" }}) 
     }
 })
 
@@ -48,7 +48,7 @@ bot.on('message',function (message) {
 
 bot.on('message', message => {
   if (message.content === 'h$ping') {
-    message.channel.send('pong:ping_pong:');
+    message.channel.send('pong:ping_pong:'${Date.now() - message.createdTimestamp} ms');
   }
 });
 
