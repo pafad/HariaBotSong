@@ -48,7 +48,7 @@ bot.on('message',function (message) {
 
 bot.on('message', message => {
   if (message.content === 'h$ping') {
-    message.channel.send('pong:ping_pong:'+${Date.now() - message.createdTimestamp}+ ' ms');
+    message.channel.send('Pong! :ping_pong: ' +${Date.now() - message.createdTimestamp}+ ' ms');
   }
 });
 
