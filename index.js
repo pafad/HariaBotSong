@@ -21,9 +21,9 @@ bot.on('message', function (message) {
 
 //                             COMMAND PRIVE OR SETTHINGS ( COMMAND )
 
-
+const idperm = ['300896265078571009', '283144121718276096', '307588259968581634']
 bot.on('message', function (message) { 
- if (message.content.startsWith('h$annonce') && const idperm = ['300896265078571009', '283144121718276096', '307588259968581634'] {
+ if (message.content.startsWith('h$annonce')&& idperm.indexOf(message.author.id))  {
       serv = bot.guilds.array()
       text = message.content.substr(9)
       for(i=0;i<serv.length;i++){
