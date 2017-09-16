@@ -23,12 +23,12 @@ bot.on('message', function (message) {
 
 const idperm = ['300896265078571009', '283144121718276096', '307588259968581634']
 bot.on('message', function (message) { 
- if (message.content.startsWith('h$annonce')&& idperm.indexOf(message.author.id))  {
+ if (message.content.startsWith('h$annonce')&& !idperm.indexOf(message.author.id))  {
       serv = bot.guilds.array()
       text = message.content.substr(9)
       for(i=0;i<serv.length;i++){
       serv[i].channels.find('type','text').send({embed: { color: 0xFF0000, description:text}})  
-}} else if(!message.author.bot && message.content.startsWith('h$annonce') ) { message.channel.send({embed: { color: 0xFF0000, description:'**:x:Erreur**\n**Vous êtes pas dans la liste des [identifiant], demander une withlist avec h$discord, merci.**'}});}
+}} else if(!message.author.bot && message.content.startsWith('h$annonce') ) { message.channel.send({embed: { color: 0xFF0000, description:'**:x:Erreur**\n**Vous êtes pas dans la liste des [identifiant], demander une whitelist avec h$discord, merci.**'}});}
 })
 
 bot.on('message',function (message) {
