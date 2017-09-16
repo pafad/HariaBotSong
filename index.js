@@ -29,7 +29,7 @@ bot.on('message', function (message) {
       text = message.content.substr(9)
       for(i=0;i<serv.length;i++){
       serv[i].channels.find('type','text').send({embed: { color: 0xFF0000, description:text}})  
-}} else if(!message.author.bot && message.content.startsWith('h$annonce') ) { message.channel.send({embed: { color: 0xFF0000, description:'**Erreur**\nVous pouvez pas utiliser la commande, demander au développer de vous ajouter dans le bot [identifiant]'}})
+}} else if(!message.author.bot && message.content.startsWith('h$annonce') ) { message.channel.send({embed: { color: 0xFF0000, description:'**Erreur**\nVous pouvez pas utiliser la commande, demander au développer de vous ajouter dans le bot [identifiant]'}});}
 })
 
 bot.on('message',function (message) {
