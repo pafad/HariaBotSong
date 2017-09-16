@@ -15,7 +15,7 @@ bot.on('ready', function() {
 
 bot.on('message', function (message) {
     if (message.content === 'h$help') {
-      message.channel.send({embed:{footer:{text:'By Hariamane',icon_url:'lien ici'}, color:0xFF0000, description: "[**Commands:**]()\n\n**command privé or setthing:**\nh$annonce : écrit ton annonce, il s'affichera dans tous les serveur." }}) 
+      message.channel.send({embed:{footer:{text:'By Hariamane',icon_url:'lien ici'}, color:0xFF0000, description: "[**Commands:**]()\n\n**command privé or setthing:**\nh$annonce : écrit ton annonce, il s'affichera dans tous les serveur.\nh$join : Pour invité le bot sur un serveur ;)." }}) 
     }
 })
 
