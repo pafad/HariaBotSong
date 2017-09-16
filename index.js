@@ -34,7 +34,7 @@ bot.on('message', function (message) {
 
 bot.on('message',function (message) {
   if (message.content === 'h$join') {
-    message.channel.send({embed: { color: 0xFF0000,('Tu veux invité le bot pas de problème il est heberger H24: https://discordapp.com/oauth2/authorize?client_id=329551988222066689&scope=bot&permissions=2146958591');
+    message.channel.send({embed: { color: 0xFF0000,('Tu veux invité le bot pas de problème il est heberger H24: https://discordapp.com/oauth2/authorize?client_id=329551988222066689&scope=bot&permissions=2146958591')}};
   }
 });
 
