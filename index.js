@@ -46,7 +46,7 @@ bot.on('message',function (message) {
 //                            COMMAND JEUX
 
 
-bot.on('message',function (message) => {
+bot.on('message',function (message) {
   if (message.content === 'h$ping') {
     message.channel.send({embed: { color: 0xFF0000,title:'Pong! :ping_pong: ' +${Date.now() - message.createdTimestamp}+ ' ms'}})
 }
