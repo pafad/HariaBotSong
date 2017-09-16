@@ -15,7 +15,7 @@ bot.on('ready', function() {
 
 bot.on('message', function (message) {
     if (message.content === 'h$help') {
-      message.channel.send({embed:{footer:{text:'By Hariamane',icon_url:' https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128'}, color:0xFF0000, description: "[**Commands:**]()\n\n**command privé or setthing:**\nh$annonce : écrit ton annonce, il s'affichera dans tous les serveur.\nh$join : Pour invité le bot sur un serveur ;)." }}) 
+      message.channel.send({embed:{footer:{text:'By Hariamane',icon_url:' https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128'}, color:0xFF0000, description: "[**Commandes:**]()\n\n**commandes privées or setthing:**\nh$annonce :  Cette commande te permet de pub pour ton discord. Il s'affiche sur tous les serveurs dont le bot en fait partie. \nh$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\nh$discord : Cette commande te permet de me rejoindre.\nh$contact : Cette commande te permet de contacter le support technique du bot." }}) 
     }
 })
 
@@ -35,8 +35,15 @@ bot.on('message', function (message) {
 
 bot.on('message',function (message) {
   if (message.content === 'h$join') {
-   message.channel.send({embed: { color: 0xFF0000,title:'Tu veux invité le bot pas de problème il est heberger H24: (https://discordapp.com/oauth2/authorize?client_id=329551988222066689&scope=bot&permissions=2146958591%27%7D%7D)%27%7D%7D)%7D%7D)%27%7D%7D)'}})
+   message.channel.send({embed: { color: 0xFF0000,title:'https://discordapp.com/oauth2/authorize?client_id=329551988222066689&scope=bot&permissions=2146958591%27%7D%7D)%27%7D%7D)%7D%7D)%27%7D%7D'}})
   }
 });
+
+bot.on('message',function (message) {
+  if (message.content === 'h$discord') {
+   message.channel.send({embed: { color: 0xFF0000,title:'Cette commande te permet de me rejoindre'}})
+  }
+});
+
 
 
