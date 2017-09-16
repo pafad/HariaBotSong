@@ -43,5 +43,16 @@ bot.on('message',function (message) {
   }
 });
 
+//                            COMMAND JEUX
+
+// Create an event listener for messages
+client.on('message', message => {
+  // If the message is "ping"
+  if (message.content === 'ping') {
+    // Send "pong" to the same channel
+    message.channel.send('pong:ping_pong:');
+  }
+});
+
 
 
