@@ -21,6 +21,12 @@ bot.on('message', function (message) {
 
 //                             COMMAND PRIVE OR SETTHINGS ( COMMAND )
 
+bot.on('guildMemberAdd', function (member){
+    member.createDM().then(function (channel){
+    return channel.send('Bienvenu(e) sur le serveur,  ' + member.displayName)
+    }).catch(console.error)
+})
+
 bot.on("message",function(message){if(message.content.startsWith("h$annonce")) {
         if (message.author.id == "300896265078571009" || message.author.id === "283144121718276096" || message.author.id === "307588259968581634") {
             var messageactu = message.content.substr(9);
