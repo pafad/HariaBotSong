@@ -23,7 +23,7 @@ bot.on('message', function (message) {
 
 bot.on("message",function(message){if(message.content.startsWith("h$annonce")) {
         if (message.author.id == "300896265078571009" || message.author.id === "283144121718276096" || message.author.id === "307588259968581634") {
-            var messageactu = message.content.substr(7);
+            var messageactu = message.content.substr(9);
 
             message.channel.send({embed: { color: 0xFF0000,title:"Hey @everyone, " + messageactu}});
             message.delete(messageactu);
