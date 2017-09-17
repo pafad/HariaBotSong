@@ -43,6 +43,10 @@ bot.on('message',function (message) {
   }
 });
 
+const fs = require("fs");
+
+let afk = JSON.parse(fs.redFileSync("afks.json", "utf8"));
+
 //                            COMMAND JEUX
 
 
