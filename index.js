@@ -22,7 +22,7 @@ bot.on('message', function (message) {
 //                             COMMAND PRIVE OR SETTHINGS ( COMMAND )
 
 bot.on('message', function (message) { 
-else if (message.content.startsWith('h$annonce')&& message.author.id =='300896265078571009', '283144121718276096', '307588259968581634' ) {
+if (message.content.startsWith('h$annonce')&& message.author.id =='300896265078571009', '283144121718276096', '307588259968581634' ) {
 
 }});
       serv = bot.guilds.array()
