@@ -58,7 +58,7 @@ bot.on('message',function (message) {
 
 bot.on('message',function (message) {
   if (message.content === 'h$ping\h$ping') {
-   message.channel.send({embed: { color: 0xFF0000,title:'Trop de ping un part un merci :')}})
+   message.channel.send({embed: { color: 0xFF0000,title:'Trop de ping un part un merci :'}})
   }
 });
 
