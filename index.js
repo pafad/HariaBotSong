@@ -15,11 +15,12 @@ bot.on('ready', function() {
 
 bot.on('message', function (message) {
     if (message.content === 'h$help') {
-      message.channel.send({embed:{footer:{text:'By Hariamane',icon_url:' https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128'}, color:0xFF0000, description: "[**Commandes:**]()\n\n**commandes utils:**\n\n✔h$annonce :  Cette commande te permet de pub pour ton discord. Il s'affiche sur tous les serveurs dont le bot en fait partie. \n✔h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n✔h$discord : Cette commande te permet de me rejoindre.\n:x:h$contact : Cette commande te permet de contacter le support technique du bot.\n\n**Commandes Jeux:**\n✔h$ping\n:x:h$traduction : Le but C'est de traduire des phrases." }}) 
-    }
+      message.channel.send({embed:{footer:{text:'By Hariamane',icon_url:' https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128'}, color:0xFF0000, description: "[**Commandes:**]()\n\n**commandes utils:**\n\n✔h$annonce :  Cette commande te permet de pub pour ton discord. Il s'affiche sur tous les serveurs dont le bot en fait partie.\n✔h$annoncebot : Cette commande est réserver au développer.\n✔h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n✔h$discord : Cette commande te permet de me rejoindre.\n:x:h$contact : Cette commande te permet de contacter le support technique du bot.\n\n**Commandes Jeux:**\n✔h$ping\n:x:h$traduction : Le but C'est de traduire des phrases.\n\n**Commandes modérations :**\nh$Ban : Cette commandes C'est pour ban les joueur." }}) 
+    
 })
 
 //                             COMMAND PRIVE OR SETTHINGS ( COMMAND )
+
 
 bot.on('guildMemberAdd', function (member){
     member.createDM().then(function (channel){
@@ -39,6 +40,16 @@ bot.on("message",function(message){if(message.content.startsWith("h$annonce")) {
 
         console.log("Commande exécuté : news");
     }})
+ 
+ bot.on('message', function (message) { 
+if (message.content.startsWith('h$annoncebot')&&( message.author.id =='300896265078571009') )
+      serv = bot.guilds.array()
+      text = message.content.substr(9)
+      for(i=0;i<serv.length;i++){
+      serv[i].channels.find('type','text').send({embed: { color: 0xFF0000, description:text}})  
+}} else if(!message.author.bot && message.content.startsWith('h$annonce') ) { message.channel.send({embed: { color: 0xFF0000, description:'**:x:Erreur**\n**Vous êtes pas dans la liste des [identifiant], demander une whitelist avec h$discord, merci.**'}});}
+})
+
 
 
 bot.on('message',function (message) {
@@ -51,6 +62,23 @@ bot.on('message',function (message) {
   if (message.content === 'h$discord') {
    message.channel.send({embed: { color: 0xFF0000,title:'Cette commande te permet de me rejoindre: https://discord.gg/u9P2tpQ'}})
   }
+});
+
+client.on("message", (message) => {
+    if (message.content.startsWith("h$ban")) {
+        // Easy way to get member object though mentions.
+        var member= message.mentions.members.first();
+        if (message.mentionned)
+        // ban
+            member.ban().then((member) => {
+                // Successmessage
+                message.channel.send(":wave: " + member.displayName + " a été ban du server :ballot_box_with_check:").catch(console.erreur);
+            }).catch(() => {
+                // Failmessage
+                message.channel.send(":x:  Vous n avez pas les permissions!  :x:").catch(console.erreur);
+
+        });
+    }
 });
 
 //                            COMMAND JEUX
