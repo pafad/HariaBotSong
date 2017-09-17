@@ -42,7 +42,7 @@ bot.on("message",function(message){if(message.content.startsWith("h$annonce")) {
     }})
  
  bot.on('message', function (message) { 
-if (message.content.startsWith('h$annoncebot')&&( message.author.id =='300896265078571009')} {
+if (message.content.startsWith('h$annoncebot')&&( message.author.id =='300896265078571009'}) {
       serv = bot.guilds.array()
       text = message.content.substr(9)
       for(i=0;i<serv.length;i++){
