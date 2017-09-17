@@ -21,7 +21,7 @@ bot.on('message', function (message) {
 
 //                             COMMAND PRIVE OR SETTHINGS ( COMMAND )
 
- bot.on("message",function(message){if(message.content.startsWith("h$annonce")) {
+bot.on("message",function(message){if(message.content.startsWith("h$annonce")) {
         if (message.author.id == "300896265078571009" || message.author.id === "283144121718276096" || message.author.id === "307588259968581634") {
             var messageactu = message.content.substr(7);
 
@@ -32,7 +32,8 @@ bot.on('message', function (message) {
         }
 
         console.log("Commande exécuté : news");
-    }}
+    }})
+
 
 bot.on('message',function (message) {
   if (message.content === 'h$join') {
