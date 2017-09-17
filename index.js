@@ -35,14 +35,6 @@ if(message.content.startsWith("h$annonce")) {
         console.log("Commande exécuté : news");
     }
 
-bot.on('message', function (message) { 
-if (message.content.startsWith('')&&( message.author.id =='300896265078571009'|| message.author.id =='283144121718276096'|| message.author.id =='307588259968581634') )
-      serv = bot.guilds.array()
-      text = message.content.substr(9)
-      for(i=0;i<serv.length;i++){
-      serv[i].channels.find('type','text').send({embed: { color: 0xFF0000, description:text}})  
-}} else if(!message.author.bot && message.content.startsWith('h$annonce') ) { message.channel.send({embed: { color: 0xFF0000, description:'**:x:Erreur**\n**Vous êtes pas dans la liste des [identifiant], demander une whitelist avec h$discord, merci.**'}});}
-})
 
 bot.on('message',function (message) {
   if (message.content === 'h$join') {
