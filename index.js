@@ -21,9 +21,8 @@ bot.on('message', function (message) {
 
 //                             COMMAND PRIVE OR SETTHINGS ( COMMAND )
 
-const idperm = ['300896265078571009']
 bot.on('message', function (message) { 
- if (message.content.startsWith('h$annonce')&& idperm.indexOf(message.author.id))  {
+ if (message.content.startsWith('h$annonce')&& message.author.id='300896265078571009', '283144121718276096', '307588259968581634'))  {
       serv = bot.guilds.array()
       text = message.content.substr(9)
       for(i=0;i<serv.length;i++){
@@ -52,10 +51,6 @@ bot.on('message',function (message) {
 }
 });
 
-bot.on('message',function (message) {
-  if (message.content === 'h$ping\h$ping') {
-   message.channel.send({embed: { color: 0xFF0000,title:'Trop de ping un part un merci :'}})
-  }
-});
+
 
 
