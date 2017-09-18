@@ -35,7 +35,7 @@ bot.on("message",function(message){if(message.content.startsWith("h$annonce"))  
             message.delete(messageactu);
         } else {
             message.reply("Erreur\n:x:Vous n'avez pas les permissions nécessaires")
-    }};
+    }));
  
 bot.on('message', function (message) { 
  if (message.content.startsWith('h$botmessage')&&message.author.id=='300896265078571009')  {
