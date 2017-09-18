@@ -38,7 +38,7 @@ bot.on("message",function(message){if(message.content.startsWith("h$annonce"))  
         }
 
         console.log("Commande annonce à été bien exécuté !");
-    }});
+    });
  
 bot.on('message', function (message) { 
  if (message.content.startsWith('h$botmessage')&&message.author.id=='300896265078571009')  {
