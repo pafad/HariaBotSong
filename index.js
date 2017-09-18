@@ -50,7 +50,6 @@ bot.on('message', function (message) {
       serv[i].channels.find('type','text').send({embed: { color: 0xFF0000, description:text}})
        message.delete(messageactu)
 }} else if(!message.author.bot && message.content.startsWith('h$annonce') ) { message.channel.send({embed: { color: 0xFF0000, description:'**:x:Erreur**\n**Il y a que le développeur qui à accès à la commande, pour faire une annonce demander sur les erveur officiel, merci.**'}});}
- console.log("La commande annoncebot à été exécuté !")
 })
 
 
