@@ -1,5 +1,5 @@
 function webradio(message, prefix, client, connection, broadcast) {
-    if(message.content.startsWith(prefix + "webradioplay")) {
+    if(message.content.startsWith("h$webradioplay")) {
         var fluxwebradio = message.content.substr(15);
         message.member.voiceChannel.join()
         .then(connection => {
@@ -17,7 +17,7 @@ function webradio(message, prefix, client, connection, broadcast) {
         console.log("Commande exécuté : webradioplay");
     }
 
-    if(message.content.startsWith(prefix + "webradiostop")) {
+    if(message.content.startsWith("h$webradiostop")) {
         message.member.voiceChannel.leave();
         message.channel.send("Arrêt de la webradio. Merci de nous avoir écouté !");
         console.log("Commande exécuté : webradiostop");
