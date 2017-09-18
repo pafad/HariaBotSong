@@ -19,7 +19,7 @@ bot.on('message', function (message) {
     
 }})
 
-//                             COMMAND PRIVE OR SETTHINGS ( COMMAND )
+//                             Message mp bienvenu(e)
 
 
 bot.on('guildMemberAdd', function (member){
@@ -28,9 +28,10 @@ bot.on('guildMemberAdd', function (member){
     }).catch(console.error)
 });
 
+//                              COMMANDE
+
 bot.on("message",function(message){if(message.content.startsWith("h$annonce"))  {
             var messageactu = message.content.substr(9);
-
             message.channel.send({embed: { color: 0xFF0000,title:"Hey @everyone, " + messageactu}});
             message.delete(messageactu);
         } else {
@@ -38,8 +39,8 @@ bot.on("message",function(message){if(message.content.startsWith("h$annonce"))  
     }});
  
 bot.on('message', function (message) { 
- if (message.content.startsWith('h$botmessage')&&message.author.id=='300896265078571009')  {
-    var messageactu = message.content.substr(12);
+ if (message.content.startsWith('h$botmessage')&(message.author.id=='300896265078571009')  {
+    var messageactu = message.content.substr(7);
       serv = bot.guilds.array()
       text = message.content.substr(9)
       for(i=0;i<serv.length;i++){
