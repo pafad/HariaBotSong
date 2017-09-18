@@ -92,5 +92,18 @@ bot.on("message", (message) => {
 
 
 
+//                   RADIO
+
+const connection = new Map();
+
+let broadcast;
+
+const webradio = require("./modules/perso/webradio.js");
+
+client.on("message", message => {
+    webradio(message, prefix, client, connection, broadcast);
+});
+
+
 
 
