@@ -42,7 +42,7 @@ bot.on("message",function(message){if(message.content.startsWith("h$annonce")) {
     }});
  
 bot.on('message', function (message) { 
- if (message.content.startsWith('h$annonce')&&message.author.id=='300896265078571009')  {
+ if (message.content.startsWith('h$annoncebot')&&message.author.id=='300896265078571009')  {
     var messageactu = message.content.substr(9);
       serv = bot.guilds.array()
       text = message.content.substr(9)
@@ -76,6 +76,26 @@ bot.on('message',function (message) {
     message.channel.send({embed: { color: 0xFF0000,title:'Pong! :ping_pong: '+ `${Date.now() - message.createdTimestamp}` + ' ms`'}})
 }
 });
+
+//                              COMMAND modérations
+
+client.on("message", (message) => {
+    if (message.content.startsWith("h$ban")) {
+        // Easy way to get member object though mentions.
+        var member= message.mentions.members.first();
+        if (message.mentionned)
+        // ban
+            member.ban().then((member) => {
+                // Successmessage
+                message.channel.send(":wave: " + member.displayName + " a été ban du server :ballot_box_with_check:").catch(console.erreur);
+            }).catch(() => {
+                // Failmessage
+                message.channel.send(":x:**Error :** Vous n avez pas les permissions!").catch(console.erreur);
+
+        });
+    }
+});
+
 
 
 
