@@ -34,10 +34,7 @@ bot.on("message",function(message){if(message.content.startsWith("h$annonce"))  
             message.channel.send({embed: { color: 0xFF0000,title:"Hey @everyone, " + messageactu}});
             message.delete(messageactu);
         } else {
-            message.reply("Erreur\n:x:Vous n'avez pas les permissions nécessaires");
-        }
-
-        console.log("Commande annonce à été bien exécuté !");
+            message.reply("Erreur\n:x:Vous n'avez pas les permissions nécessaires")
     });
  
 bot.on('message', function (message) { 
