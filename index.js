@@ -38,8 +38,7 @@ bot.on("message",function(message){if(message.content.startsWith("h$annonce"))  
             message.reply("Erreur\n:x:Vous n'avez pas les permissions nécessaires")
     }});
  
-bot.on('message', function (message) { 
- if (message.content.startsWith('h$botmessage')&(message.author.id=='300896265078571009')  {
+bot.on('message', function (message) {if (message.content.startsWith('h$botmessage')&(message.author.id=='300896265078571009'))  {
     var messageactu = message.content.substr(7);
       serv = bot.guilds.array()
       text = message.content.substr(9)
