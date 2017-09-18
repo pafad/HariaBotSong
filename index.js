@@ -26,7 +26,7 @@ bot.on('guildMemberAdd', function (member){
     member.createDM().then(function (channel){
     return channel.send('Bienvenu(e) sur le serveur,  ' + member.displayName)
     }).catch(console.error)
-}});
+});
 
 bot.on("message",function(message){if(message.content.startsWith("h$annonce"))  {
             var messageactu = message.content.substr(9);
