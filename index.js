@@ -73,7 +73,7 @@ bot.on('message',function (message) {
 
 //                              COMMAND modérations
 
-bot.on('message',function (message) => {
+bot.on('message',function (message) ==> {
     if (message.content.startsWith("h$ban")) {
         // Easy way to get member object though mentions.
         var member= message.mentions.members.first();
