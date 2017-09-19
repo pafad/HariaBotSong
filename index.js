@@ -5,6 +5,7 @@
 //                         CODE HORS SUJET DU BOT/CE CODE EST POUR LES OPTIONS ET LA CONFUGERATION DU BOT
 
 const Discord = require('discord.js')
+const client = new discord.Client();
 const bot = new Discord.Client()
 
 bot.login(process.env.Discord_token ||  process.argv[2]);
@@ -100,8 +101,9 @@ let broadcast;
 
 const webradio = require("/app/webradio.js");
 
-bot.on("message", message => {
-    webradio(message, bot, connection, broadcast);
+client.on("message", message => {
+    webradio(message, client, connection, broadcast);
+
 });
 
 
