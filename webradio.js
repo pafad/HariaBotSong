@@ -8,7 +8,7 @@ function webradio(message, prefix, client, connection, broadcast) {
                 message.channel.send("Lecture du flux webradio suivante\nBonne écoute !");
             });
         });
-        bot.user.setGame(fluxwebradio).then(ok => {
+        Client.bot.user.setGame(fluxwebradio).then(ok => {
             console.log("Changement de jeu effectué !");
         });
 
