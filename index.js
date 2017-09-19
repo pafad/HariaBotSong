@@ -38,9 +38,9 @@ bot.on("message",function(message){if(message.content.startsWith("h$annonce"))  
     }});
  
 bot.on('message', function (message) {if (message.content.startsWith('h$botmessage')&(message.author.id=='300896265078571009'))  {
-    var messageactu = message.content.substr(10);
+    var messageactu = message.content.substr(9);
       serv = bot.guilds.array()
-      text = message.content.substr(9)
+      text = message.content.substr(10)
       for(i=0;i<serv.length;i++){
       serv[i].channels.find('type','text').send({embed: { color: 0xFF0000, description:text}})
        message.delete(messageactu)
