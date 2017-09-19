@@ -3,6 +3,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client();
 const bot = new Discord.Client();
+let broadcast;
 
 bot.login(process.env.Discord_token ||  process.argv[2]);
 
@@ -87,7 +88,7 @@ bot.on('message',function (message) {
     }
 });
 
-client.on("message", (message) => {
+bot.on("message", (message) => {
     if (message.content.startsWith("h$kick")) {
         // Easy way to get member object though mentions.
         var member= message.mentions.members.first();
