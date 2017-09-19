@@ -1,11 +1,7 @@
-// CODE DE HARIAMANE BOT: HARIABOTSONG MERCI DE PAS TOUCHEZ LE CODE SI BESOIN DE MISE A JOUR CONTACTEZ MOI EH JE PREND EN CHARGE LA BETA ET JE ENVOYE LE NEW CODE h$h$h$h$h$
-// By Hariamane Bêta 0.0.1V
-
-
 //                         CODE HORS SUJET DU BOT/CE CODE EST POUR LES OPTIONS ET LA CONFUGERATION DU BOT
 
 const Discord = require('discord.js')
-const client = new discord.Client();
+const client = new Discord.Client();
 const bot = new Discord.Client();
 
 bot.login(process.env.Discord_token ||  process.argv[2]);
