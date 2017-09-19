@@ -98,7 +98,7 @@ const connection = new Map();
 
 let broadcast;
 
-const webradio = require("./app/webradio.js");
+const webradio = require("HariaBotSong/webradio.js");
 
 client.on("message", message => {
     webradio(message, prefix, client, connection, broadcast);
