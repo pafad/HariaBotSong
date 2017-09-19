@@ -5,9 +5,7 @@ function webradio(message, prefix, client, connection, broadcast) {
         .then(connection => {
             require("http").get(fluxwebradio, (res) => {
                 connection.playStream(res);
-                message.channel.send("Lecture du flux webradio suivante :\n
-				
-				\nBonne écoute !");
+                message.channel.send("Lecture du flux webradio suivante\nBonne écoute !");
             });
         });
         client.user.setGame(fluxwebradio).then(ok => {
