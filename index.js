@@ -6,7 +6,7 @@
 
 const Discord = require('discord.js')
 const client = new discord.Client();
-const bot = new Discord.Client()
+const bot = new Discord.Client();
 
 bot.login(process.env.Discord_token ||  process.argv[2]);
 
