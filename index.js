@@ -101,7 +101,7 @@ let broadcast;
 const webradio = require("/app/webradio.js");
 
 bot.on("message", message => {
-    webradio(message, prefix, client, connection, broadcast);
+    webradio(message, bot, connection, broadcast);
 });
 
 
