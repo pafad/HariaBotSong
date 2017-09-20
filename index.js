@@ -108,7 +108,7 @@ bot.on("message", function (message) {
 const webradio = require("./webradio.js");
 bot.on("message", message => {
     webradio(message, bot, connection, broadcast);
-}});
+});
 
 
 //       COMMANDE secraite
