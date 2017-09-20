@@ -1,8 +1,4 @@
 //                         CODE HORS SUJET DU BOT/CE CODE EST POUR LES OPTIONS ET LA CONFUGERATION DU BOT
- 
- const Discord = require('discord.js')
- const client = new Discord.Client();
- //                         CODE HORS SUJET DU BOT/CE CODE EST POUR LES OPTIONS ET LA CONFIGURATION DU BOT
  "use_strict";
  const Discord = require("discord.js");
  const bot = new Discord.Client();
