@@ -20,7 +20,7 @@ bot.on("message", function (message) {
           icon_url: "https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128"
         },
         color:0xFF0000,
-        description: "[**Commandes:**]()\n\n**commandes utils :**\n\n✔h$annonce : Cette commande te permet de pub pour ton discord. Il s'affiche sur tous les serveurs dont le bot en fait partie.\n✔h$botmessage : Cette commande est réservé au développeur.\n✔h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n✔h$discord : Cette commande te permet de me rejoindre.\n:x:h$support : Cette commande te permet de contacter le support technique du bot.\n\n**Commandes jeux :**\n✔h$ping\n:x:h$traduction : Le but c'est de traduire des phrases.\n\n\**Radio :**\n:x:h$webradioplay : Pour écouter de la radio.\n:x:h$webradiostop : Pour stopper la radio."
+        description: "[**Commandes:**]()\n\n**commandes utils :**\n\n✔h$annonce : Cette commande te permet de pub pour ton discord. Il s'affiche sur tous les serveurs dont le bot en fait partie.\n✔h$botmessage : Cette commande est réservé au développeur.\n✔h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n✔h$discord : Cette commande te permet de me rejoindre.\n:x:h$support : Cette commande te permet de contacter le support technique du bot.\n\n**Commandes jeux :**\n✔h$ping\n:x:h$traduction : Le but c'est de traduire des phrases.\n\n\**Radio :**\n✔h$webradioplay : Pour écouter de la radio.\n✔h$webradiostop : Pour stopper la radio."
       }
     });
   }
