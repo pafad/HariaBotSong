@@ -3,7 +3,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client();
 const bot = new Discord.Client();
-const Client = new broadcast.Client();
+const connection = new Map();
 let broadcast;
 
 bot.login(process.env.Discord_token ||  process.argv[2]);
