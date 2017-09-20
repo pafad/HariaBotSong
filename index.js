@@ -107,9 +107,6 @@ bot.on("message", (message) => {
 
 //                   RADIO
 
-const connection = new Map();
-
-let broadcast;
 
 const webradio = require("/app/webradio.js");
 
