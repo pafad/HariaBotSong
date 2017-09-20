@@ -27,7 +27,6 @@ bot.on("message", function (message) {
 });
 
 //                             Message MP Bienvenue
-
 bot.on("guildMemberAdd", function (member) {
   member.createDM().then(function (channel) {
     return channel.send("Bienvenue sur le serveur, " + member.displayName)
@@ -35,7 +34,6 @@ bot.on("guildMemberAdd", function (member) {
 });
 
 //                             COMMANDE ANNONCE
-
 bot.on("message", function(message) {
   if(message.content.startsWith("h$annonce")) {
     var messageactu = message.content.substr(9);
@@ -47,7 +45,8 @@ bot.on("message", function(message) {
     });
     message.delete(messageactu);
   }
-  else if(!message.author.bot && message.content.startsWith("h$annonce")) {
+  
+  if(!message.author.bot && message.content.startsWith("h$annonce")) {
     message.channel.send({
       embed: {
         color: 0xFF0000,
@@ -112,7 +111,6 @@ bot.on("message", function (message) {
 });
 
 //                            COMMANDE MODÉRATION
-
 bot.on("message", function (message) {
   if (message.content.startsWith("h$ban")) {
     // Easy way to get member object though mentions.
@@ -124,7 +122,7 @@ bot.on("message", function (message) {
       message.channel.send(":wave: " + member.displayName + " a été ban du serveur :ballot_box_with_check:").catch(console.erreur);
     }).catch(() => {
       // Failmessage
-      message.channel.send(":x:**Error :** Vous n'avez pas les permissions !").catch(console.erreur);
+      message.channel.send(":x: **Erreur :** Vous n'avez pas les permissions !").catch(console.erreur);
     });
   }
 
