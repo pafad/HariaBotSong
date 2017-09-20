@@ -108,7 +108,7 @@ bot.on("message", (message) => {
 //                   RADIO
 
 
-const webradio = require("/app/webradio.js");
+const webradio = require("webradio.js");
 
 client.on("message", message => {
     webradio(message, client, connection, broadcast);
