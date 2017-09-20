@@ -1,11 +1,11 @@
-function webradio(message, client, connection, broadcast) {
+function webradio(message, bot, connection, broadcast) {
     if(message.content.startsWith("h$webradioplay")) {
         var fluxwebradio = message.content.substr(15);
         message.member.voiceChannel.join()
         .then(connection => {
             require("http").get(fluxwebradio, (res) => {
                 connection.playStream(res);
-                message.channel.send("Lecture du flux webradio suivante :\n\nBonne écoute !");
+                message.channel.send("Lecture du flux webradio suivante :\n```" + fluxwebradio + "```\nBonne écoute !");
             });
         });
         client.user.setGame(fluxwebradio).then(ok => {
