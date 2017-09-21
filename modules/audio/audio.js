@@ -143,7 +143,7 @@ function audio(bot) {
 	};
 
 	bot.on("message", msg => {
-		if (!msg.content.startsWith(prefix)) return;
+		if (!msg.content.startsWith('h$')) return;
 		if (commands.hasOwnProperty(msg.content.toLowerCase().slice(prefix.length).split(" ")[0])) commands[msg.content.toLowerCase().slice(prefix.length).split(" ")[0]](msg);
 	});
 }
