@@ -19,3 +19,5 @@ function owneronly(message, bot) {
 		}
 	}
 }
+
+module.exports = owneronly;
