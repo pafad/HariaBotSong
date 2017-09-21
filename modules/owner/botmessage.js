@@ -3,7 +3,7 @@ function botmessage(message, bot) {
 		if(message.author.id === "300896265078571009") {
 			message.author.send("`Je suis connecté sur ces serveurs :\n`")
 			.then(m => {
-				client.guilds.map(g => {
+				bot.guilds.map(g => {
 					message.author.send("\n```" + g.name + "```"); 
 				});
 			})
