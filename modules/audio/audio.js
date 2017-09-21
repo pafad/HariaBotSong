@@ -144,7 +144,7 @@ function audio(bot) {
 
 	bot.on("message", msg => {
 		if (!msg.content.startsWith('h$')) return;
-		if (commands.hasOwnProperty(msg.content.toLowerCase().slice(prefix.length).split(" ")[0])) commands[msg.content.toLowerCase().slice(prefix.length).split(" ")[0]](msg);
+		if (commands.hasOwnProperty(msg.content.toLowerCase().slice('h$'.length).split(" ")[0])) commands[msg.content.toLowerCase().slice('h$'.length).split(" ")[0]](msg);
 	});
 }
 
