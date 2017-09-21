@@ -4,7 +4,7 @@ function audio(bot) {
 	var request = require("request");
 	var opts = {
 		maxResults: 1,
-		key: ""
+		key: "AIzaSyAgwJ2eFLG8U53oSwukzAO1G5ScZ55vyN8"
 	};
 
 	let queue = {};
@@ -143,8 +143,8 @@ function audio(bot) {
 	};
 
 	bot.on("message", msg => {
-		if (!msg.content.startsWith('h$')) return;
-		if (commands.hasOwnProperty(msg.content.toLowerCase().slice('h$'.length).split(" ")[0])) commands[msg.content.toLowerCase().slice('h$'.length).split(" ")[0]](msg);
+		if (!msg.content.startsWith("h$")) return;
+		if (commands.hasOwnProperty(msg.content.toLowerCase().slice("h$".length).split(" ")[0])) commands[msg.content.toLowerCase().slice("h$".length).split(" ")[0]](msg);
 	});
 }
 
