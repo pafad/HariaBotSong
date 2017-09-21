@@ -10,7 +10,7 @@ function audio(bot) {
 	let queue = {};
 
 	const commands = {
-		'h$playyt': (msg) => {
+		'playyt': (msg) => {
 			if (queue[msg.guild.id] === undefined) return msg.channel.send("Pour lancer la musique, ajouter en une en faisant h$add");
 			if (!msg.guild.voiceConnection) return commands.join(msg).then(() => commands.play(msg));
 			if (queue[msg.guild.id].playing) return msg.channel.send("Déjà en cours de lecture");
@@ -67,7 +67,7 @@ function audio(bot) {
 			})(queue[msg.guild.id].songs.shift());
 		},
 
-		'h$add': (msg) => {
+		'add': (msg) => {
 			let test = msg.content.substr(5);
 			if (test == "" || test === undefined) return msg.channel.send("Veuillez recommencer en saisissant une recherche");
 			search(test, opts, function(faux, results) {
@@ -90,7 +90,7 @@ function audio(bot) {
 			});
 		},
 
-		'h$addlist': (msg) => {
+		'addlist': (msg) => {
 			let test = msg.content.substr(9);
 			if (test == "" || test === undefined) return msg.channel.send("Veuillez recommencer en saisissant une recherche");
 
@@ -134,7 +134,7 @@ function audio(bot) {
 				}
 		},
 
-		'h$queue': (msg) => {
+		'queue': (msg) => {
 			if (queue[msg.guild.id] === undefined) return msg.channel.send("Pour visualiser la file d'attente, ajouter une musique en faisant h$add");
 			let tosend = [];
 			queue[msg.guild.id].songs.forEach((song, i) => { tosend.push(`${i+1}. ${song.title} - Demandé par : ${song.requester}`);});
