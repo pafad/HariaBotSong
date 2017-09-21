@@ -9,8 +9,7 @@ function annonce(message, bot) {
 				}
 			});
 			message.delete(messageactu);
-		}
-		else {
+		} else {
 			message.channel.send({
 				embed: {
 					color: 0xFF0000,

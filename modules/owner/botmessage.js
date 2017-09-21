@@ -15,8 +15,7 @@ function botmessage(message, bot) {
 				message.delete(servers);
 			}
 		}
-	}
-	else {
+	} else {
 		message.channel.send({
 			embed: {
 				color: 0xFF0000,
