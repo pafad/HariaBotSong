@@ -5,7 +5,7 @@ const connection = new Map();
 let broadcast;
 
 bot.on("ready", function() {
-	bot.user.setGame("h$help Bêta 0.1, by Hariamane").catch(console.error)
+	bot.user.setGame("h$help Alpha 0.1, by Hariamane").catch(console.error)
 });
 
 // Envoi un MP lorsqu'un nouvel utilisateur arrive sur un serveur Discord
