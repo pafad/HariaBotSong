@@ -47,5 +47,4 @@ color: 0x3366FF,
 description: ":wastebasket: `" + args + "` messages supprimés!",
 footer: {
 text: " "
-}
-}});
+}}});
