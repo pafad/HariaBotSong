@@ -29,7 +29,7 @@ function audio(bot) {
 				});
 
 				msg.channel.send(`Je vais jouer **${song.title}** qui a été demandé par **${song.requester}**`);
-				bot.user.setGame(`${song.title}`);
+				bot.user.setGame(`${song.title}`, "https://twitch.tv/Hariamane");
 				dispatcher = msg.guild.voiceConnection.playStream(yt(song.url, { audioonly: true }), { passes : 1 });
 				let collector = msg.channel.createCollector(m => m);
 
