@@ -13,7 +13,7 @@ function audio(bot) {
 		'playyt': (msg) => {
 			if (queue[msg.guild.id] === undefined) return msg.channel.send("Pour lancer la musique, ajouter en une en faisant h$add");
 			if (!msg.guild.voiceConnection) return commands.join(msg).then(() => commands.play(msg));
-			if (queue[msg.guild.id].playing) return msg.channel.send("Déjà en cours de lecture");
+			if (queue[msg.guild.id].playing) return msg.channel.send({embed: { color: 0xFF0000, description:"Déjà en cours de lecture"}});
 			let dispatcher;
 			queue[msg.guild.id].playing = true;
 
@@ -22,7 +22,7 @@ function audio(bot) {
 			(function play(song) {
 				console.log(song);
 
-				if (song === undefined) return msg.channel.send("La file d'attente est vide").then(() => {
+				if (song === undefined) return msg.channel.send({embed: { color: 0xFF0000, description:":x: La file d'attente est vide"}}).then(() => {
 					queue[msg.guild.id].playing = false;
 					msg.member.voiceChannel.leave();
 					bot.user.setGame("h$help Alpha 0.1, by Hariamane");
@@ -39,17 +39,17 @@ function audio(bot) {
 					} else if (m.content === "h$resume") {
 						msg.channel.send("Relancé").then(() => {dispatcher.resume();});
 					} else if (m.content === "h$next") {
-						msg.channel.send("Suivant").then(() => {dispatcher.end();});
+						msg.channel.send({embed: { color: 0xFF0000, description:"Suivant"}}).then(() => {dispatcher.end();});
 					} else if (m.content === "h$volume+") {
-						if (Math.round(dispatcher.volume*50) >= 100) return msg.channel.send(`Volume : ${Math.round(dispatcher.volume*50)}%`);
+						if (Math.round(dispatcher.volume*50) >= 100) return msg.channel.send({embed: { color: 0xFF0000, description:`Volume : ${Math.round(dispatcher.volume*50)}%`);
 						dispatcher.setVolume(Math.min((dispatcher.volume*50 + (2*(m.content.split('+').length-1)))/50,2));
-						msg.channel.send(`Volume : ${Math.round(dispatcher.volume*50)}%`);
+						msg.channel.send(`Volume : ${Math.round(dispatcher.volume*50}})}%`);
 					} else if (m.content === "h$volume-") {
-						if (Math.round(dispatcher.volume*50) <= 0) return msg.channel.send(`Volume : ${Math.round(dispatcher.volume*50)}%`);
+						if (Math.round(dispatcher.volume*50) <= 0) return msg.channel.send({embed: { color: 0xFF0000, description:`Volume : ${Math.round(dispatcher.volume*50)}%`);
 						dispatcher.setVolume(Math.max((dispatcher.volume*50 - (2*(m.content.split('-').length-1)))/50,0));
-						msg.channel.send(`Volume : ${Math.round(dispatcher.volume*50)}%`);
+						msg.channel.send(`Volume : ${Math.round(dispatcher.volume*50}})}%`);
 					} else if (m.content === "h$time") {
-						msg.channel.send(`Temps : ${Math.floor(dispatcher.time / 60000)}:${Math.floor((dispatcher.time % 60000)/1000) <10 ? '0'+Math.floor((dispatcher.time % 60000)/1000) : Math.floor((dispatcher.time % 60000)/1000)}`);
+						msg.channel.send({embed: { color: 0xFF0000, description:`Temps : ${Math.floor(dispatcher.time / 60000)}:${Math.floor((dispatcher.time % 60000)/1000) <10 ? '0'+Math.floor((dispatcher.time % 60000)/1000) : Math.floor((dispatcher.time % 60000)/1000}})}`);
 					}
 				});
 
@@ -59,7 +59,7 @@ function audio(bot) {
 				});
 
 				dispatcher.on("error", (err) => {
-					return msg.channel.send("Erreur : " + err).then(() => {
+					return msg.channel.send({embed: { color: 0xFF0000, description:":x:Erreur : " + err}}).then(() => {
 						collector.stop();
 						play(queue[msg.guild.id].songs.shift());
 					});
@@ -76,23 +76,23 @@ function audio(bot) {
 				const url = results[0].link;
 			
 				yt.getInfo(url, (err, info) => {
-					if(err) return msg.channel.send('Erreur du lien : ' + err);
+					if(err) return msg.channel.send({embed: { color: 0xFF0000, description:':x:Erreur du lien : ' + err}});
 					if (!queue.hasOwnProperty(msg.guild.id)) queue[msg.guild.id] = {}, queue[msg.guild.id].playing = false, queue[msg.guild.id].songs = [];
 					queue[msg.guild.id].songs.push({url: url, title: info.title, requester: msg.author.username});
-					msg.channel.send(`Ajout à la file d'attente **${info.title}**`);
+					msg.channel.send({embed: { color: 0xFF0000, description:(`Ajout à la file d'attente **${info.title}**`}});
 				});
 			});
 
 			return new Promise((resolve, reject) => {
 				const voiceChannel = msg.member.voiceChannel;
-				if (!voiceChannel || voiceChannel.type !== "voice") return msg.reply("Je ne peux pas me connecter à un canal vocal");
+				if (!voiceChannel || voiceChannel.type !== "voice") return msg.reply({embed: { color: 0xFF0000, description:":x:Je ne peux pas me connecter à un canal vocal"}});
 				voiceChannel.join().then(connection => resolve(connection)).catch(err => reject(err));
 			});
 		},
 
 		'addlist': (msg) => {
 			let test = msg.content.substr(9);
-			if (test == "" || test === undefined) return msg.channel.send("Veuillez recommencer en saisissant une recherche");
+			if (test == "" || test === undefined) return msg.channel.send({embed: { color: 0xFF0000, description:"Veuillez recommencer en saisissant une recherche"}});
 
 			/* Vérification de l'URL */
 
@@ -119,7 +119,7 @@ function audio(bot) {
 							var url = "https://www.youtube.com/watch?v=" + add;
 
 							yt.getInfo(url, (err, info) => {
-								if(err) return msg.channel.send("Erreur du lien : " + err);
+								if(err) return msg.channel.send({embed: { color: 0xFF0000, description:":x:Erreur du lien : " + err}});
 								if (!queue.hasOwnProperty(msg.guild.id)) queue[msg.guild.id] = {}, queue[msg.guild.id].playing = false, queue[msg.guild.id].songs = [];
 								queue[msg.guild.id].songs.push({url: url, title: info.title, requester: msg.author.username});
 								msg.channel.send(`Ajout à la file d'attente **${info.title}**`);
@@ -130,7 +130,7 @@ function audio(bot) {
 						} while(premier < resultat)
 					});
 				} else {
-					return msg.reply("L'URL n'a pas été bien saisie :(\nL'URL doir commencer par ceci : " + tester)
+					return msg.reply({embed: { color: 0xFF0000, description:":x:L'URL n'a pas été bien saisie :(\nL'URL doir commencer par ceci : " + tester}})
 				}
 		},
 
