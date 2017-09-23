@@ -1,4 +1,4 @@
-
+function clear (message, bot)
 bot.client.on('message' , message => {
 if (message.content.startsWith( "h$clear")) {
 message.delete();
