@@ -25,7 +25,7 @@ function audio(bot) {
 				if (song === undefined) return msg.channel.send("La file d'attente est vide").then(() => {
 					queue[msg.guild.id].playing = false;
 					msg.member.voiceChannel.leave();
-					bot.user.setGame("h$help Bêta 0.1, by Hariamane");
+					bot.user.setGame("h$help Alpha 0.1, by Hariamane");
 				});
 
 				msg.channel.send(`Je vais jouer **${song.title}** qui a été demandé par **${song.requester}**`);
