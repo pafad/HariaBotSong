@@ -79,7 +79,7 @@ function audio(bot) {
 					if(err) return msg.channel.send({embed: { color: 0xFF0000, description:':x:Erreur du lien : ' + err}});
 					if (!queue.hasOwnProperty(msg.guild.id)) queue[msg.guild.id] = {}, queue[msg.guild.id].playing = false, queue[msg.guild.id].songs = [];
 					queue[msg.guild.id].songs.push({url: url, title: info.title, requester: msg.author.username});
-					msg.channel.send({embed: { color: 0xFF0000, description:(`Ajout à la file d'attente **${info.title}**`}});
+					msg.channel.send({embed: { color: 0xFF0000, description:`Ajout à la file d'attente **${info.title}**`}});
 				});
 			});
 
