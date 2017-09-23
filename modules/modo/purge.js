@@ -1,5 +1,5 @@
 
-client.on('message' , message => {
+bot.client.on('message' , message => {
 if (message.content.startsWith( "h$clear")) {
 message.delete();
 let modRole = message.guild.roles.find("name", "Mod");
