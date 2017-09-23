@@ -41,11 +41,11 @@ function audio(bot) {
 					} else if (m.content === "h$next") {
 						msg.channel.send({embed: { color: 0xFF0000, description:"Suivant"}}).then(() => {dispatcher.end();});
 					} else if (m.content === "h$volume+") {
-						if (Math.round(dispatcher.volume*50) >= 100) return msg.channel.send({embed: { color: 0xFF0000, description:`Volume : ${Math.round(dispatcher.volume*50)}%`);
+						if (Math.round(dispatcher.volume*50) >= 100) return msg.channel.send({embed: { color: 0xFF0000, description:`Volume : ${Math.round(dispatcher.volume*50}})}%`);
 						dispatcher.setVolume(Math.min((dispatcher.volume*50 + (2*(m.content.split('+').length-1)))/50,2));
 						msg.channel.send(`Volume : ${Math.round(dispatcher.volume*50}})}%`);
 					} else if (m.content === "h$volume-") {
-						if (Math.round(dispatcher.volume*50) <= 0) return msg.channel.send({embed: { color: 0xFF0000, description:`Volume : ${Math.round(dispatcher.volume*50)}%`);
+						if (Math.round(dispatcher.volume*50) <= 0) return msg.channel.send({embed: { color: 0xFF0000, description:`Volume : ${Math.round(dispatcher.volume*50}})}%`);
 						dispatcher.setVolume(Math.max((dispatcher.volume*50 - (2*(m.content.split('-').length-1)))/50,0));
 						msg.channel.send(`Volume : ${Math.round(dispatcher.volume*50}})}%`);
 					} else if (m.content === "h$time") {
