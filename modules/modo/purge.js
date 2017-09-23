@@ -1,5 +1,4 @@
-function clear (message, bot)
-bot.client.on('message' , message => {
+function clear(message, bot) {
 if (message.content.startsWith( "h$clear")) {
 message.delete();
 let modRole = message.guild.roles.find("name", "Mod");
