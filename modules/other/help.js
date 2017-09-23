@@ -37,11 +37,7 @@ function help(message, bot) {
 			}
 		});
 	}
-}
 
-module.exports = help;
-
-function help(message, bot) {
 	if (message.content === "h$helpici") {
 		message.channel.send({
 			embed: {
@@ -83,5 +79,3 @@ function help(message, bot) {
 }
 
 module.exports = help;
-
-
