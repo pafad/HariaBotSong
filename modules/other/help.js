@@ -47,7 +47,7 @@ function help(message, bot) {
 					text: "By Hariamane",
 					icon_url: "https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128"
 				},
-				color: 0xFF0000,
+								color: 0xFF0000,
 				description: "[**Commandes:**]()\n\n" +
 				"**Commandes utils :**\n\n" +
 				":white_check_mark:h$annonce : Cette commande est réservé au développeur.\n" +
@@ -59,8 +59,9 @@ function help(message, bot) {
 				":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n" +
 				":x:h$traduction : Le but c'est de traduire des phrases.\n\n" +
 				"**Commandes modérateur :**\n\n" +
-				":x:h$ban : Cette commande c'est pour ban un utilisateur.\n" +
-				":x:h$kick : Cette commande c'est pour kicker un utilisateur.\n\n" +
+				":white_check_mark:h$ban : Cette commande c'est pour ban un utilisateur.\n" +
+				":white_check_mark:h$kick : Cette commande c'est pour kicker un utilisateur.\n" +
+				":x:h$purge: Cette commande c'est pour effacers des messages en un coup en mettant la valeurs.\n\n" +
 				"**Commandes radio :**\n\n" +
 				":white_check_mark:h$webradioplay <flux_radio> : Pour écouter de la radio.\n" +
 				":white_check_mark:h$webradiostop : Pour stopper la radio.\n\n" +
