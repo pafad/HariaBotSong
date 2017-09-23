@@ -49,7 +49,7 @@ function audio(bot) {
 						dispatcher.setVolume(Math.max((dispatcher.volume*50 - (2*(m.content.split('-').length-1)))/50,0));
 						msg.channel.send(`Volume : ${Math.round(dispatcher.volume*50)}%`);
 					} else if (m.content === "h$time") {
-						msg.channel.send({embed: { color: 0xFF0000, description:`Temps : ${Math.floor(dispatcher.time / 60000)}:${Math.floor((dispatcher.time % 60000)/1000) <10 ? '0'+Math.floor((dispatcher.time % 60000)/1000) : Math.floor((dispatcher.time % 60000)/1000}})}`);
+						msg.channel.send({embed: { color: 0xFF0000, description:`Temps : ${Math.floor(dispatcher.time / 60000)}:${Math.floor((dispatcher.time % 60000)/1000) <10 ? '0'+Math.floor((dispatcher.time % 60000)/1000) : Math.floor((dispatcher.time % 60000)/1000)}`}});
 					}
 				});
 
