@@ -21,7 +21,7 @@ function help(message, bot) {
 				"**Commandes modérateur :**\n\n" +
 				":white_check_mark:h$ban : Cette commande c'est pour ban un utilisateur.\n" +
 				":white_check_mark:h$kick : Cette commande c'est pour kicker un utilisateur.\n" +
-				":x:h$purge: Cette commande c'est pour effacers des messages en un coup en mettant la valeurs.\n\n" +
+				":x:h$clear : Cette commande c'est pour effacers des messages en un coup en mettant la valeurs.\n\n" +
 				"**Commandes radio :**\n\n" +
 				":white_check_mark:h$webradioplay <flux_radio> : Pour écouter de la radio.\n" +
 				":white_check_mark:h$webradiostop : Pour stopper la radio.\n\n" +
@@ -61,7 +61,7 @@ function help(message, bot) {
 				"**Commandes modérateur :**\n\n" +
 				":white_check_mark:h$ban : Cette commande c'est pour ban un utilisateur.\n" +
 				":white_check_mark:h$kick : Cette commande c'est pour kicker un utilisateur.\n" +
-				":x:h$purge: Cette commande c'est pour effacers des messages en un coup en mettant la valeurs.\n\n" +
+				":x:h$clear : Cette commande c'est pour effacers des messages en un coup en mettant la valeurs.\n\n" +
 				"**Commandes radio :**\n\n" +
 				":white_check_mark:h$webradioplay <flux_radio> : Pour écouter de la radio.\n" +
 				":white_check_mark:h$webradiostop : Pour stopper la radio.\n\n" +
