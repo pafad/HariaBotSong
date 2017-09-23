@@ -1,13 +1,7 @@
 function help(message, bot) {
 	if (message.content === "h$help") {
-		message.channel.send({
-			embed: {
-				footer: {
-				color: 0xFF0000,
-				title: ":white_check_mark:, Help send, enjoy ;)"
-			}
-
-		message.author.send({
+		message.channel.send({embed: { color: 0xFF0000, description:"Envoyé, verifier faut message privé ;)"}})
+	     message.author.send({
 			embed: {
 				footer: {
 					text: "By Hariamane",
