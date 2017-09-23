@@ -1,5 +1,12 @@
 function help(message, bot) {
 	if (message.content === "h$help") {
+		message.channel.send({
+			embed: {
+				footer: {
+				color: 0xFF0000,
+				title: ":white_check_mark:, Help send, enjoy ;)"
+			}
+
 		message.author.send({
 			embed: {
 				footer: {
