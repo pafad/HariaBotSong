@@ -35,7 +35,7 @@ const ping = require("./modules/other/ping.js");
 // MODÉRATION
 const ban = require("./modules/modo/ban.js");
 const kick = require("./modules/modo/kick.js");
-const purge = require("./modules/modo/purge.js");
+const clear = require("./modules/modo/purge.js");
 
 // RADIO
 const webradio = require("./modules/perso/webradio.js");
