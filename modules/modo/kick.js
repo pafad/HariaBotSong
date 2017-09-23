@@ -5,10 +5,10 @@ function kick(message, bot) {
 		// Kick
 		member.kick().then((member) => {
 			// Successmessage
-			message.channel.send(":wave: " + member.displayName + " à bien été kické :point_right:");
+			message.channel.send({embed: { color: 0xFF0000, description:":wave: " + member.displayName + " à bien été kické :point_right:"}});
 		}).catch(() => {
 			// Failmessage
-			message.channel.send("Accès refusé");
+			message.channel.send({embed: { color: 0xFF0000, description:"Accès refusé"}});
 		});
 	}
 }
