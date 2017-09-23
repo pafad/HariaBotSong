@@ -25,7 +25,7 @@ function audio(bot) {
 				if (song === undefined) return msg.channel.send({embed: { color: 0xFF0000, description:":x: La file d'attente est vide"}}).then(() => {
 					queue[msg.guild.id].playing = false;
 					msg.member.voiceChannel.leave();
-					bot.user.setGame("h$help Alpha 0.1, by Hariamane", "https://twitch.tv/Hariamane");
+					bot.user.setGame("h$help/h$helpici Alpha v0.1 by Hariamane", "https://twitch.tv/Hariamane");
 				});
 
 				msg.channel.send(`Je vais jouer **${song.title}** qui a été demandé par **${song.requester}**`);
