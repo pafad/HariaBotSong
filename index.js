@@ -32,6 +32,9 @@ const srvdiscord = require("./modules/other/srvdiscord.js");
 // JEUX
 const ping = require("./modules/other/ping.js");
 
+// AUTRES
+const say = require(".modules/owner/say.js");
+
 // MODÉRATION
 const ban = require("./modules/modo/ban.js");
 const kick = require("./modules/modo/kick.js");
