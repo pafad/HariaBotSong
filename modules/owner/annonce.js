@@ -4,8 +4,6 @@ function annonce(message, bot) {
 			message.channel.send({
 					title: "Hey @everyone, " + messageactu});
 			message.delete(messageactu)}};
-		}
-	}
+		}	
 }
-
 module.exports = annonce;
