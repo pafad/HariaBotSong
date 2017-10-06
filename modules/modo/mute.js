@@ -1,6 +1,6 @@
 function mute(msg){
 	if(msg.member.hasPermission('KICK_MEMBERS')){
-		var args = msg.content.split(' ');
+		var args = msg.content.split('h$mute ');
 		var mrole = msg.guild.roles.find('name','botMute');
 		var amute = msg.mentions.members.first();
 		var bmute = args[1];
