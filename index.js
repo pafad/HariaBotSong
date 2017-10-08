@@ -48,6 +48,10 @@ const webradio = require("./modules/perso/webradio.js");
 const audio = require("./modules/audio/audio.js");
 audio(bot);
 
+// STOP WebRadio/Musique
+const stop = require("./modules/Stopvocal/stopvocal.js");
+stop(bot);
+
 bot.on("message", message => {
 	annonce(message, bot);
 	botmessage(message, bot);
@@ -62,6 +66,7 @@ bot.on("message", message => {
 	mute(message, bot);
 	say(message, bot);
 	webradio(message, bot, connection, broadcast);
+	stop(message, bot, connection, broadcast);
 });
 
 bot.login(process.env.Discord_token || process.argv[2]);
