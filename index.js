@@ -48,6 +48,9 @@ const webradio = require("./modules/perso/webradio.js");
 const audio = require("./modules/audio/audio.js");
 audio(bot);
 
+// Bruits
+const bruits = require("./modules/bruits/bruits.js")
+
 // STOP WebRadio/Musique
 const stop = require("./modules/Stopvocal/stopvocal.js");
 stop(bot);
@@ -65,6 +68,7 @@ bot.on("message", message => {
 	clear(message, bot);
 	mute(message, bot);
 	say(message, bot);
+	bruits(message, bot);
 	webradio(message, bot, connection, broadcast);
 	stop(message, bot, connection, broadcast);
 });
