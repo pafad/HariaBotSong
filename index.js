@@ -59,6 +59,7 @@ bot.on("message", message => {
 	kick(message, bot);
 	clear(message, bot);
 	mute(message, bot);
+	say(message, bot);
 	webradio(message, bot, connection, broadcast);
 });
 
