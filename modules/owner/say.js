@@ -1,7 +1,9 @@
 function say(message, bot) {
-	if(message.content.startsWith("h$say")) {
-               var messageactu = message.content.substr(9);
-			message.channel.send(messageactu);
-			message.delete(messageactu)}};
+    if (message.content.startsWith("h$say")) {
+        var msg = message.content.substr(6);
+        message.delete(message.author)
+        message.channel.send(msg);
+    }
+})
 
 module.exports = say;
