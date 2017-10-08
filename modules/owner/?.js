@@ -1,5 +1,5 @@
-function botmessage(message, bot) {
-	if(message.content === "h$botmessage") {
+function ?(message, bot) {
+	if(message.content === "?") {
 		if(message.author.id === "300896265078571009") {
 			message.author.send("`Je suis connecté sur ces serveurs :\n`")
 			.then(m => {
@@ -21,4 +21,4 @@ function botmessage(message, bot) {
 	}
 }
 
-module.exports = botmessage;
+module.exports = ?;
