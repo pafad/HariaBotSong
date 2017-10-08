@@ -1,4 +1,4 @@
-
+function clear(message, bot) {
     if (message.content == "h$clear") {
         try {
             if (message.member.hasPermission("MANAGE_MESSAGES")) {
@@ -12,3 +12,4 @@
     }
 
 });
+module.exports = clear;
