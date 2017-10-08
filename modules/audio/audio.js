@@ -25,7 +25,7 @@ function audio(bot) {
 				if (song === undefined) return msg.channel.send({embed: { color: 0xFF0000, description:":x: La file d'attente est vide"}}).then(() => {
 					queue[msg.guild.id].playing = false;
 					msg.member.voiceChannel.leave();
-					bot.user.setGame("h$help/h$helpici Alpha v0.1 by Hariamane", "https://twitch.tv/Hariamane");
+					bot.user.setGame("h$help/h$helpici Bêta v0.2 by Hariamane", "https://twitch.tv/Hariamane");
 				});
 
 				msg.channel.send(`Je vais jouer **${song.title}** qui a été demandé par **${song.requester}**`);
@@ -37,7 +37,7 @@ function audio(bot) {
 					if (m.content === "h$pause") {
 						msg.channel.send("Mis en pause").then(() => {dispatcher.pause();});
 					} else if (m.content === "h$resume") {
-						msg.channel.send("Relancé").then(() => {dispatcher.resume();});
+						msg.channel.send({embed: { color: 0xFF0000, description:"Relancé"}}).then(() => {dispatcher.resume();});
 					} else if (m.content === "h$next") {
 						msg.channel.send({embed: { color: 0xFF0000, description:"Suivant"}}).then(() => {dispatcher.end();});
 					} else if (m.content === "h$volume+") {
@@ -69,7 +69,7 @@ function audio(bot) {
 
 		'add': (msg) => {
 			let test = msg.content.substr(5);
-			if (test == "" || test === undefined) return msg.channel.send("Veuillez recommencer en saisissant une recherche");
+			if (test == "" || test === undefined) return msg.channel.send({embed: { color: 0xFF0000, description:"Veuillez recommencer en saisissant une recherche"}}));
 			search(test, opts, function(faux, results) {
 				if(faux) return msg.reply("Erreur 404");
 				console.dir(results);
@@ -138,7 +138,7 @@ function audio(bot) {
 			if (queue[msg.guild.id] === undefined) return msg.channel.send("Pour visualiser la file d'attente, ajouter une musique en faisant h$add");
 			let tosend = [];
 			queue[msg.guild.id].songs.forEach((song, i) => { tosend.push(`${i+1}. ${song.title} - Demandé par : ${song.requester}`);});
-			msg.channel.send(`__**Liste des musiques en attente sur ${msg.guild.name}**__\nActuellement **${tosend.length}** musique(s) à sa liste ${(tosend.length > 15 ? '*[Only next 15 shown]*' : '')}\n\`\`\`${tosend.slice(0,15).join('\n')}\`\`\``);
+			msg.channel.send({embed: { color: 0xFF0000, description:`__**Liste des musiques en attente sur ${msg.guild.name}**__\nActuellement **${tosend.length}** musique(s) à sa liste ${(tosend.length > 15 ? '*[Only next 15 shown]*' : '')}\n\`\`\`${tosend.slice(0,15).join('\n')}\`\`\``}});
 		}
 	};
 
