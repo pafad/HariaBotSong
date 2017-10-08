@@ -43,3 +43,4 @@ function mute(message, bot) {
 		msg.channel.send(":x: Vous n'avez pas de permission");
 	}
 }
+module.exports = mute;
