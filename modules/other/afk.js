@@ -1,8 +1,9 @@
 const fs = require("fs")
 var msg = message;
+var prefixe = "h$";
 
 let afk = JSON.parse(fs.readFileSync("afk.json" , "utf8"));
-if message.content.startsWith(h$ + "renafk")){
+if message.content.startsWith(prefixe + "renafk")){
   if(afk[msg.author.id]) {
     delete afk[msg.author.id];
 if(msg.member.nickname === null) {
@@ -25,11 +26,11 @@ if (message.content.startswith(h$ + "afk")||message.content === prefix + "afk") 
   if (args1.length === 0) {
    afk[message.author.id] = {"reason" : true};
    message.delete();
-    message.channel.send({embed: { color: 0xFF0000, description:'Tu es désormé **AFK**, met $(h$)remafk**pour enlèvé ton afk'}}).then(x => DeleteQueue.add(x, 10000));
+    message.channel.send({embed: { color: 0xFF0000, description:'Tu es désormé **AFK**, met $(prefixe)remafk**pour enlèvé ton afk'}}).then(x => DeleteQueue.add(x, 10000));
   }else{
     afk[message.author.id] = {"reason" : args1.join( " ")};
    message.delete();
-    message.channel.send({embed: { color: 0xFF0000, description:'Tu es désormé **AFK**, met $(h$)remafk**pour enlèvé ton afk'}}).then(x => DeleteQueue.add(x, 10000));
+    message.channel.send({embed: { color: 0xFF0000, description:'Tu es désormé **AFK**, met $(prefixe)remafk**pour enlèvé ton afk'}}).then(x => DeleteQueue.add(x, 10000));
   }
   fs.writeFile("afk.json", JSON.stringify(afk), (err) =>( if (err) 
   console.error(err);)};
