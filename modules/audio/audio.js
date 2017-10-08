@@ -28,7 +28,7 @@ function audio(bot) {
 					bot.user.setGame("h$help/h$helpici Bêta v0.2 by Hariamane", "https://twitch.tv/Hariamane");
 				});
 
-				msg.channel.send(`Je vais jouer **${song.title}** qui a été demandé par **${song.requester}**`);
+				msg.channel.send({embed: { color: 0xFF0000, description:`Je vais jouer **${song.title}** qui a été demandé par **${song.requester}**`}});
 				bot.user.setGame(`${song.title}`, "https://twitch.tv/Hariamane");
 				dispatcher = msg.guild.voiceConnection.playStream(yt(song.url, { audioonly: true }), { passes : 1 });
 				let collector = msg.channel.createCollector(m => m);
