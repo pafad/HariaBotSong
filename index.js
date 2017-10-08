@@ -57,6 +57,8 @@ bot.on("message", message => {
 	ping(message, bot);
 	ban(message, bot);
 	kick(message, bot);
+	clear(message, bot);
+	mute(message, bot);
 	webradio(message, bot, connection, broadcast);
 });
 
