@@ -52,7 +52,7 @@ audio(bot);
 const bruits = require("./modules/bruits/bruits.js")
 
 // STOP WebRadio/Musique
-const stop = require("./modules/Stopvocal/stopvocal.js");
+const stop = require("./modules/stopvocal/stopvocal.js");
 stop(bot);
 
 bot.on("message", message => {
