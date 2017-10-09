@@ -5,7 +5,8 @@ const connection = new Map();
 let broadcast;
 
 bot.on("ready", function() {
-	bot.user.setGame("h$help/h$helpici Bêta v2 by Hariamane", "https://twitch.tv/Hariamane").catch(console.error)
+	bot.user.setGame("h$help/h$helpici Bêtav2,5|Sur ${client.guilds.size} serveurs, by Hariamane", "https://twitch.tv/Hariamane").catch(console.error)
+	bot.user.setGame(`${prefix}help | Sur ${client.guilds.size} serveur.`)
 });
 
 // Envoi un MP lorsqu'un nouvel utilisateur arrive sur un serveur Discord
