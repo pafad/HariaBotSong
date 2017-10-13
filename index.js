@@ -22,6 +22,7 @@ const owneronly = require("./modules/owner/owneronly.js");
 
 // AIDE (HELP)
 const help = require("./modules/other/help.js");
+const support = require(".modules/other/support.js");
 
 // POUR METTRE LE BOT SUR SON SERVEUR DISCORD (JOIN)
 const join = require("./modules/other/join.js");
@@ -71,6 +72,7 @@ bot.on("message", message => {
 	mute(message, bot);
 	say(message, bot);
 	bruits(message, bot);
+	mp(message, bot);
 	webradio(message, bot, connection, broadcast);
 	stop(message, bot, connection, broadcast);
 });
