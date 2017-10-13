@@ -3,7 +3,7 @@ function srvdiscord(message, bot) {
 		message.channel.send({
 			embed: {
 				color: 0xFF0000,
-				title: "Cette commande te permet de me rejoindre : https://discord.gg/u9P2tpQ"
+				title: "Cette commande te permet de me rejoindre : https://discord.gg/mgwgRxR"
 			}
 		});
 	}
