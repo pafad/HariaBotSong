@@ -1,4 +1,3 @@
-
 function support(message, bot) {
     if (message.content.startsWith("h$support")) {
 
