@@ -15,11 +15,12 @@ function help(message, bot) {
 				":white_check_mark:h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n" +
 				":white_check_mark:h$discord : Cette commande te permet de me rejoindre.\n" +
 				":x:h$support : Cette commande te permet de contacter le support technique du bot.\n\n" +
+				":white_check_mark:h$mp : Envoyé un message privé a quelqu'un.\n" +
 				"**Commandes jeux :**\n\n" +
 				":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n" +
 				":x:h$traduction : Le but c'est de traduire des phrases.\n\n" +
 				"**Autres commandes :**\n\n"+
-				":white_check_mark:h$say :Faire parler le bot.\n" +
+				":white_check_mark:h$say : Faire parler le bot.\n\n" +
 				"**Commandes modérateur :**\n\n" +
 				":white_check_mark:h$ban : Cette commande c'est pour ban un utilisateur.\n" +
 				":white_check_mark:h$kick : Cette commande c'est pour kicker un utilisateur.\n" +
@@ -56,15 +57,18 @@ function help(message, bot) {
 				},
 								color: 0xFF0000,
 				description: "[**Commandes:**]()\n\n" +
-				"**Commandes utils :**\n\n" +
+                                "**Commandes utils :**\n\n" +
 				":white_check_mark:h$annonce : Cette commande est réservé au développeur.\n" +
 				":white_check_mark:h$botmessage : Cette commande est réservé au développeur.\n" +
 				":white_check_mark:h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n" +
 				":white_check_mark:h$discord : Cette commande te permet de me rejoindre.\n" +
 				":x:h$support : Cette commande te permet de contacter le support technique du bot.\n\n" +
+				":white_check_mark:h$mp : Envoyé un message privé a quelqu'un.\n" +
 				"**Commandes jeux :**\n\n" +
 				":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n" +
 				":x:h$traduction : Le but c'est de traduire des phrases.\n\n" +
+				"**Autres commandes :**\n\n"+
+				":white_check_mark:h$say : Faire parler le bot.\n\n" +
 				"**Commandes modérateur :**\n\n" +
 				":white_check_mark:h$ban : Cette commande c'est pour ban un utilisateur.\n" +
 				":white_check_mark:h$kick : Cette commande c'est pour kicker un utilisateur.\n" +
@@ -74,7 +78,7 @@ function help(message, bot) {
 				":white_check_mark:h$webradioplay <flux_radio> : Pour écouter de la radio.\n" +
 				":white_check_mark:h$webradiostop : Pour stopper la radio.\n\n" +
 				"**Commandes audio :**\n\n" +
-				":white_check_mark:h$add <recherche> ou h$add <URL vidéo> : Pour ajouter une musique recherché ou l'URL de la vidéo et met le bot dans un canal vocal.\n" +
+				":white_check_mark:h$add : <recherche> ou h$add <URL vidéo> : Pour ajouter une musique recherché ou l'URL de la vidéo et met le bot dans un canal vocal.\n" +
 				":white_check_mark:h$playyt : Pour mettre la musique en lecture.\n" +
 				":white_check_mark:h$pause : Pour mettre la musique en cours de lecture en pause.\n" +
 				":white_check_mark:h$resume : Pour remettre la musique qui était en pause de nouveau en lecture.\n" +
@@ -83,7 +87,7 @@ function help(message, bot) {
 				":white_check_mark:h$volume- : Pour diminuer le volume de la musique en cours de lecture.\n" +
 				":white_check_mark:h$time : Affiche le temps écoulé de la musique en cours de lecture.\n" +
 				":white_check_mark:h$addlist : Pour ajouter une playlist YouTube.\n" +
-				":white_check_mark:h$queue : Pour afficher la/les musique(s) qui est/sont dans la file d'attente."
+				":white_check_mark:h$queue : Pour afficher la/les musique(s) qui est/sont dans la file d'attente." +
 				"**Bruits vocal**\n\n" +
 				":x:h$bruits: Listes des bruits pour le vocal." +
 				"**STOP webradio/Musique :**\n\n" +
