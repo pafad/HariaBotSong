@@ -1,6 +1,6 @@
 function help(message, bot) {
 	if (message.content === "h$help") {
-		message.channel.send({embed: { color: 0xFF0000, description:"Envoyé, verifier faut message privé ;)"}})
+		message.channel.send({embed: { color: 0xFF0000, description:":envelope_with_arrow: Help envoyer en mp !"}})
 	     message.author.send({
 			embed: {
 				footer: {
