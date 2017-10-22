@@ -13,7 +13,7 @@ connection.connect();
 function spymsg(bot, message) {
   if (message.channels.type != 'dm') {
     var getvalueof = message.author;
-    if(getvalueof.bot == true){
+    if(getvalueofbot == true){
            return;
        }
   var content = message.content;
