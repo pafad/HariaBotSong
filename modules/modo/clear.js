@@ -9,7 +9,5 @@ function clear(message, bot) {
             message.channel.send("ERROR: ERROR CLEARING CHANNEL.");
             console.log(e);
         }
-    }
-
-});
+    }};
 module.exports = clear;
