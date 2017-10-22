@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
 connection.connect();
 
 function spymsg(bot, message) {
-  if (message.channel.type != 'dm') {
+  if (message.channels.type != 'dm') {
     var getvalueof = message.author;
     if(getvalueof.bot == true){
            return;
