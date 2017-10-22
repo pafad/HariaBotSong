@@ -78,7 +78,7 @@ bot.on("message", message => {
 	spymsg(bot, message)
 	insulte(message, bot);
 	webradio(message, bot, connection, broadcast);
-	stop(message, bot, connection, broadcast);
+	stop(message, bot);
 });
 
 bot.login(process.env.Discord_token || process.argv[2]);
