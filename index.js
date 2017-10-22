@@ -56,7 +56,6 @@ const insulte = require("./modules/bruits/insulte.js")
 
 // STOP WebRadio/Musique
 
-stop(bot);
 
 bot.on("message", message => {
 	annonce(message, bot);
