@@ -27,7 +27,5 @@ function spymsg(bot, message) {
         console.log(error);
         return;
       }
-    })
-  }
-});
+    })}};
 module.exports = spymsg;
