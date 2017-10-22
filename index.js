@@ -57,7 +57,7 @@ const bruits = require("./modules/bruits/bruits.js")
 const insulte = require("./modules/bruits/insulte.js")
 
 // STOP WebRadio/Musique
-
+const stop = require("./modules/stopvocal/stopvocal.js");
 
 bot.on("message", message => {
 	annonce(message, bot);
@@ -78,7 +78,7 @@ bot.on("message", message => {
 	spymsg(bot, message)
 	insulte(message, bot);
 	webradio(message, bot, connection, broadcast);
-	stop(bot, message);
+	stop(message, bot, connection, broadcast);
 });
 
 bot.login(process.env.Discord_token || process.argv[2]);
