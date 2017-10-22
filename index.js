@@ -21,7 +21,7 @@ const botmessage = require("./modules/owner/botmessage.js");
 const owneronly = require("./modules/owner/owneronly.js");
 
 // AIDE (HELP)
-const help = require("./modules/other/help.js");
+const help = require("./modules/help.js");
 const support = require(".modules/other/support.js");
 
 // POUR METTRE LE BOT SUR SON SERVEUR DISCORD (JOIN)
