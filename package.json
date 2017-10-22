@@ -10,6 +10,7 @@
     "ffmpeg-binaries": "^3.2.2",
     "http": "0.0.0",
     "node-opus": "^0.2.6",
+    "mysql": "^2.15.0",
     "request": "^2.81.0",
     "youtube-search": "^1.0.9",
     "ytdl-core": "^0.14.0"
