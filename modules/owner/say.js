@@ -3,7 +3,5 @@ function say(message, bot) {
         var msg = message.content.substr(6);
         message.delete(message.author)
         message.channel.send(msg);
-    }
-})
-
+    }};
 module.exports = say;
