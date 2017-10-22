@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
 });
 connection.connect();
 
-bot.on('message', message => {
+function spymsg(bot, message) {
   if (message.channel.type != 'dm') {
     var getvalueof = message.author;
     if(getvalueof.bot == true){
@@ -30,3 +30,4 @@ bot.on('message', message => {
     })
   }
 });
+module.exports = spymsg;
