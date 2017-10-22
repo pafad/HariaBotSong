@@ -69,7 +69,7 @@ function audio(bot) {
 
 		'add': (msg) => {
 			let test = msg.content.substr(5);
-			if (test == "" || test === undefined) return msg.channel.send({embed: { color: 0xFF0000, description:"Veuillez recommencer en saisissant une recherche"}}));
+			if (test == "" || test === undefined) return msg.channel.send({embed: { color: 0xFF0000, description:"Veuillez recommencer en saisissant une recherche"}});
 			search(test, opts, function(faux, results) {
 				if(faux) return msg.reply("Erreur 404");
 				console.dir(results);
