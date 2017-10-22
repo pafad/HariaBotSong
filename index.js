@@ -55,7 +55,7 @@ const bruits = require("./modules/bruits/bruits.js")
 const insulte = require("./modules/bruits/insulte.js")
 
 // STOP WebRadio/Musique
-const stop = require("./modules/stopvocal/stopvocal.js");
+
 stop(bot);
 
 bot.on("message", message => {
