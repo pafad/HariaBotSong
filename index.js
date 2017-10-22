@@ -39,6 +39,7 @@ const say = require("./modules/owner/say.js");
 const psymsg = require("./modules/other/spymsg.js");
 
 // MODÉRATION
+const mute = require("./modules/modo/mute.js");
 const ban = require("./modules/modo/ban.js");
 const kick = require("./modules/modo/kick.js");
 const clear = require("./modules/modo/clear.js");
