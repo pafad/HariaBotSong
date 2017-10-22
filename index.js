@@ -74,6 +74,8 @@ bot.on("message", message => {
 	say(message, bot);
 	bruits(message, bot);
 	support(message, bot);
+	say(message, bot);
+	psymsg(message, bot);
 	mp(message, bot);
 	insulte(message, bot);
 	webradio(message, bot, connection, broadcast);
