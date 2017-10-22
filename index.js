@@ -36,7 +36,7 @@ const ping = require("./modules/other/ping.js");
 
 // AUTRES
 const say = require("./modules/owner/say.js");
-const psymsg = require("./modules/other/spymsg.js");
+const spymsg = require("./modules/other/spymsg.js");
 
 // MODÉRATION
 const mute = require("./modules/modo/mute.js");
