@@ -10,9 +10,8 @@ function mute(message, bot) {
   if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('I do not have the correct permissions.').catch(console.error);
 if (message.guild.member(target).roles.has(muteRole.id)) {
     message.guild.member(target).removeRole(muteRole).then(() => {
-      message.channel.send("Muted " + target + " Reason: " + reason);
-    })};
-     catch(() => {
+      message.channel.send("Muted " + target + " Reason: " + reason);)};
+     } else {
     message.guild.member(target).addRole(muteRole).then(() => {
       message.channel.send("Muted. " + target + " Reason: " + reason);
     };
