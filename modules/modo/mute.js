@@ -11,8 +11,7 @@ function mute(message, bot) {
 if (message.guild.member(target).roles.has(muteRole.id)) {
     message.guild.member(target).removeRole(muteRole).then(() => {
       message.channel.send("Muted " + target + " Reason: " + reason);
-    })};
-	else{
+    })};.catch(() => {
     message.guild.member(target).addRole(muteRole).then(() => {
       message.channel.send("Muted. " + target + " Reason: " + reason);
     };
