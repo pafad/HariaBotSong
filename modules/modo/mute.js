@@ -8,28 +8,24 @@ function mute(message, bot) {
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to mute them.').catch(console.error);
 
   if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('I do not have the correct permissions.').catch(console.error);
-
-  if (message.guild.member(target).roles.has(muteRole.id)) {
+if (message.guild.member(target).roles.has(muteRole.id)) {
     message.guild.member(target).removeRole(muteRole).then(() => {
       message.channel.send("Muted " + target + " Reason: " + reason);
-    }});
+    });
   } else {
     message.guild.member(target).addRole(muteRole).then(() => {
       message.channel.send("Muted. " + target + " Reason: " + reason);
-    }});
-  }
-
-};
-
+    });
+  }};
 exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ['m'],
   permLevel: 2
 };
-
 exports.help = {
   name: 'mute',
   description: 'Use only for naughty people. Makes it so they cannot send messages.',
   usage: 'mute [mention] [reason (optional)]'};
+	
 module.exports = mute;
