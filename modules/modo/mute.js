@@ -1,47 +1,36 @@
 function mute(message, bot) {
-	if(message.member.hasPermission('KICK_MEMBERS')){
-		var args = message.content.startsWith("h$mute ");
-		var mrole = message.guild.roles.find('name','botMute');
-		var amute = message.mentions.members.first();
-		var msg = message.channel.send()
-		var bmute = args[1];
-		if(mrole){
-			if(amute!=bmute) return message.channel.send(':x: syntax invalide')
-			if(amute){
-				if(args.length>2){
-					args.shift();
-					args.shift();
-					var reason = args.join(' ');
-				} else {
-					reason = 'Sans raison.'
-				}
-				if(amute.roles.exists('name','botMute')){
-					amute.removeRole(mrole);
-					message.channel.send(`:ok_hand: **${amute.user.username}** a été démuté ${reason}`, reason)
-				}else{
-					amute.addRole(mrole);
-					message.channel.send(`:ok_hand: **${amute.user.username}** a été mute ${reason}`, reason)
-				}
-			}else{
-				message.channel.send(":x: Veuillez mentionner la personne à mute")
-			}
-		}else{
-			try{
-				message.guild.createRole({
-					name:'botMute',
-					color: 0x000000
-				}).then(r=>{
-					message.channel.send("Role `botMute` n'existe pas... je viens d'en créer un.\nessayez de ban la personne dans quelques instants.");
-					message.guild.channels.findAll('type','text').map(c =>{
-						c.overwritePermissions(r,{'SEND_MESSAGES': false});
-					});
-				})
-			}catch(e){
-				message.channel.send("J'ai pas assez de permissions.```js\n"+e+"```")
-			}
-		}
-	}else{
-		message.channel.send(":x: Vous n'avez pas de permission");
-	}
-}
+	exports.run = (client, message, args) => {
+  let reason = args.slice(1).join(' ');
+  let target = message.mentions.users.first();
+  let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'silenced');
+  if (!muteRole) return message.reply('There\'s no mute role.').catch(console.error);
+  if (reason.length < 1) return message.reply('You must supply a reason for the mute.').catch(console.error);
+  if (message.mentions.users.size < 1) return message.reply('You must mention someone to mute them.').catch(console.error);
+
+  if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('I do not have the correct permissions.').catch(console.error);
+
+  if (message.guild.member(target).roles.has(muteRole.id)) {
+    message.guild.member(target).removeRole(muteRole).then(() => {
+      message.channel.send("Muted " + target + " Reason: " + reason);
+    });
+  } else {
+    message.guild.member(target).addRole(muteRole).then(() => {
+      message.channel.send("Muted. " + target + " Reason: " + reason);
+    });
+  }
+
+};
+
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: ['m'],
+  permLevel: 2
+};
+
+exports.help = {
+  name: 'mute',
+  description: 'Use only for naughty people. Makes it so they cannot send messages.',
+  usage: 'mute [mention] [reason (optional)]'
+};
 module.exports = mute;
