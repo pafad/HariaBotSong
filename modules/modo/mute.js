@@ -14,7 +14,6 @@ if (message.guild.member(target).roles.has(muteRole.id)) {
      } else {
     message.guild.member(target).addRole(muteRole).then(() => {
       message.channel.send("Muted. " + target + " Reason: " + reason);
-    };
   }};
 exports.conf = {
   enabled: true,
