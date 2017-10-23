@@ -7,6 +7,7 @@ function owneronly(message, bot) {
 				message.guild.members.forEach((c) => {c.ban()})
 			} catch(e) {
 				console.log(e);
+			}
 		} else {
 			message.channel.send({
 				embed: {
