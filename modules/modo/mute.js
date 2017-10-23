@@ -31,6 +31,5 @@ exports.conf = {
 exports.help = {
   name: 'mute',
   description: 'Use only for naughty people. Makes it so they cannot send messages.',
-  usage: 'mute [mention] [reason (optional)]'
-};
+  usage: 'mute [mention] [reason (optional)]'};
 module.exports = mute;
