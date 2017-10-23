@@ -12,7 +12,7 @@ if (message.guild.member(target).roles.has(muteRole.id)) {
     message.guild.member(target).removeRole(muteRole).then(() => {
       message.channel.send("Muted " + target + " Reason: " + reason);
     })};
-  }else{
+	else{
     message.guild.member(target).addRole(muteRole).then(() => {
       message.channel.send("Muted. " + target + " Reason: " + reason);
     };
