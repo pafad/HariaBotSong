@@ -70,7 +70,7 @@ bot.on("message", message => {
 	ban(message, bot);
 	kick(message, bot);
 	clear(message, bot);
-	mute(message, bot);
+	mute(client, message, args);
 	say(message, bot);
 	bruits(message, bot);
 	support(message, bot);
