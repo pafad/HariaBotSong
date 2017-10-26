@@ -22,6 +22,7 @@ const owneronly = require("./modules/owner/owneronly.js");
 
 // AIDE (HELP)
 const help = require("./modules/help.js");
+const helpaudio = require("./modules/audio/helpaudio.js");
 
 const support = require("./modules/other/support.js");
 
@@ -75,8 +76,8 @@ bot.on("message", message => {
 	say(message, bot);
 	spymsg(bot, message)
 	insulte(message, bot);
+	help(message, bot)
 	webradio(message, bot, connection, broadcast);
-	stop(message, bot, connection, broadcast);
 });
 
 bot.login(process.env.Discord_token || process.argv[2]);
