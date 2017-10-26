@@ -34,9 +34,7 @@ function help(message, bot) {
 				":white_check_mark:h$addlist : Pour ajouter une playlist YouTube.\n" +
 				":white_check_mark:h$queue : Pour afficher la/les musique(s) qui est/sont dans la file d'attente." +
 				"**Bruits vocal**\n\n" +
-				":x:h$bruits: Listes des bruits pour le vocal." +
-				"**STOP webradio/Musique :**\n\n" +
-				":white_check_mark:h$stop : Pour arreté le vocal (WebRadio/Musiques)."
+				":x:h$bruits: Listes des bruits pour le vocal."
 			}
 		});
 	}
@@ -76,9 +74,7 @@ function help(message, bot) {
 				":white_check_mark:h$addlist : Pour ajouter une playlist YouTube.\n" +
 				":white_check_mark:h$queue : Pour afficher la/les musique(s) qui est/sont dans la file d'attente." +
 				"**Bruits vocal**\n\n" +
-				":x:h$bruits: Listes des bruits pour le vocal." +
-				"**STOP webradio/Musique :**\n\n" +
-				":white_check_mark:h$stop : Pour arreté le vocal (WebRadio/Musiques)."
+				":x:h$bruits: Listes des bruits pour le vocal."
 			}
 		});
 	}
