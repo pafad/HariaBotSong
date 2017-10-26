@@ -14,7 +14,7 @@ function help(message, bot) {
 				":white_check_mark:h$addlist : Pour ajouter une playlist YouTube.\n" +
 				":white_check_mark:h$queue : Pour afficher la/les musique(s) qui est/sont dans la file d'attente." 
 			}
-	}
+
 	
 	if (message.content === "h$helpaudioici") {
 	message.channel.send({embed:{footer:{text: "By Hariamane",icon_url: "https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128"},color: 0xFF0000,
@@ -31,4 +31,3 @@ function help(message, bot) {
 				":white_check_mark:h$addlist : Pour ajouter une playlist YouTube.\n" +
 				":white_check_mark:h$queue : Pour afficher la/les musique(s) qui est/sont dans la file d'attente." 
 			}
-	}
