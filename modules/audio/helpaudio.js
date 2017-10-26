@@ -14,7 +14,7 @@ function help(message, bot) {
 				":white_check_mark:h$addlist : Pour ajouter une playlist YouTube.\n" +
 				":white_check_mark:h$queue : Pour afficher la/les musique(s) qui est/sont dans la file d'attente." 
 			}
-		});
+		};
 	}
 	
 	if (message.content === "h$helpaudioici") {
@@ -32,5 +32,5 @@ function help(message, bot) {
 				":white_check_mark:h$addlist : Pour ajouter une playlist YouTube.\n" +
 				":white_check_mark:h$queue : Pour afficher la/les musique(s) qui est/sont dans la file d'attente." 
 			}
-		});
+		};
 	}
