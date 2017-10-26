@@ -23,18 +23,7 @@ function help(message, bot) {
 				":white_check_mark:h$webradioplay <flux_radio> : Pour écouter de la radio.\n" +
 				":white_check_mark:h$webradiostop : Pour stopper la radio.\n\n" +
 				"**Commandes audio :**\n\n" +
-				":white_check_mark:h$add : <recherche> ou h$add <URL vidéo> : Pour ajouter une musique recherché ou l'URL de la vidéo et met le bot dans un canal vocal.\n" +
-				":white_check_mark:h$playyt : Pour mettre la musique en lecture.\n" +
-				":white_check_mark:h$pause : Pour mettre la musique en cours de lecture en pause.\n" +
-				":white_check_mark:h$resume : Pour remettre la musique qui était en pause de nouveau en lecture.\n" +
-				":white_check_mark:h$next : Pour arrêter la musique en cours de lecture et de passer à la suivante.\n" +
-				":white_check_mark:h$volume+ : Pour augmenter le volume de la musique en cours de lecture.\n" +
-				":white_check_mark:h$volume- : Pour diminuer le volume de la musique en cours de lecture.\n" +
-				":white_check_mark:h$time : Affiche le temps écoulé de la musique en cours de lecture.\n" +
-				":white_check_mark:h$addlist : Pour ajouter une playlist YouTube.\n" +
-				":white_check_mark:h$queue : Pour afficher la/les musique(s) qui est/sont dans la file d'attente." +
-				"**Bruits vocal**\n\n" +
-				":x:h$bruits: Listes des bruits pour le vocal."
+				":white_check_mark:h$helpaudio: Listes des commandes audio.\n" 
 			}
 		});
 	}
@@ -63,18 +52,7 @@ function help(message, bot) {
 				":white_check_mark:h$webradioplay <flux_radio> : Pour écouter de la radio.\n" +
 				":white_check_mark:h$webradiostop : Pour stopper la radio.\n\n" +
 				"**Commandes audio :**\n\n" +
-				":white_check_mark:h$add : <recherche> ou h$add <URL vidéo> : Pour ajouter une musique recherché ou l'URL de la vidéo et met le bot dans un canal vocal.\n" +
-				":white_check_mark:h$playyt : Pour mettre la musique en lecture.\n" +
-				":white_check_mark:h$pause : Pour mettre la musique en cours de lecture en pause.\n" +
-				":white_check_mark:h$resume : Pour remettre la musique qui était en pause de nouveau en lecture.\n" +
-				":white_check_mark:h$next : Pour arrêter la musique en cours de lecture et de passer à la suivante.\n" +
-				":white_check_mark:h$volume+ : Pour augmenter le volume de la musique en cours de lecture.\n" +
-				":white_check_mark:h$volume- : Pour diminuer le volume de la musique en cours de lecture.\n" +
-				":white_check_mark:h$time : Affiche le temps écoulé de la musique en cours de lecture.\n" +
-				":white_check_mark:h$addlist : Pour ajouter une playlist YouTube.\n" +
-				":white_check_mark:h$queue : Pour afficher la/les musique(s) qui est/sont dans la file d'attente." +
-				"**Bruits vocal**\n\n" +
-				":x:h$bruits: Listes des bruits pour le vocal."
+				":white_check_mark:h$helpaudio: Listes des commandes audio.\n" 
 			}
 		});
 	}
