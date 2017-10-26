@@ -1,4 +1,4 @@
-function mute(message, bot) {
+function mute(client, message, args) {
 	exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let target = message.mentions.users.first();
