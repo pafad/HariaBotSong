@@ -14,6 +14,5 @@ function help(message, bot) {
 				":white_check_mark:h$time : Affiche le temps écoulé de la musique en cours de lecture.\n" +
 				":white_check_mark:h$addlist : Pour ajouter une playlist YouTube.\n" +
 				":white_check_mark:h$queue : Pour afficher la/les musique(s) qui est/sont dans la file d'attente." +
-			}
 		});
 	}
