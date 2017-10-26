@@ -23,7 +23,8 @@ function help(message, bot) {
 				":white_check_mark:h$webradioplay <flux_radio> : Pour écouter de la radio.\n" +
 				":white_check_mark:h$webradiostop : Pour stopper la radio.\n\n" +
 				"**Commandes audio :**\n\n" +
-				":white_check_mark:h$helpaudio: Listes des commandes audio.\n" 
+				":white_check_mark:h$helpaudio: Listes des commandes audio (MP).\n" +
+				":white_check_mark:h$helpaudioici: Listes des commandes audio (serveur)."
 			}
 		});
 	}
@@ -52,7 +53,8 @@ function help(message, bot) {
 				":white_check_mark:h$webradioplay <flux_radio> : Pour écouter de la radio.\n" +
 				":white_check_mark:h$webradiostop : Pour stopper la radio.\n\n" +
 				"**Commandes audio :**\n\n" +
-				":white_check_mark:h$helpaudio: Listes des commandes audio.\n" 
+				":white_check_mark:h$helpaudio: Listes des commandes audio (MP).\n" +
+				":white_check_mark:h$helpaudioici: Listes des commandes audio (serveur)."
 			}
 		});
 	}
