@@ -39,7 +39,6 @@ const say = require("./modules/owner/say.js");
 const spymsg = require("./modules/other/spymsg.js");
 
 // MODÉRATION
-const mute = require("./modules/modo/mute.js");
 const ban = require("./modules/modo/ban.js");
 const kick = require("./modules/modo/kick.js");
 const clear = require("./modules/modo/clear.js");
@@ -70,7 +69,6 @@ bot.on("message", message => {
 	ban(message, bot);
 	kick(message, bot);
 	clear(message, bot);
-	mute(client, message, args);
 	say(message, bot);
 	bruits(message, bot);
 	support(message, bot);
