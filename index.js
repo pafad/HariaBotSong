@@ -64,6 +64,7 @@ bot.on("message", message => {
 	botmessage(message, bot);
 	owneronly(message, bot);
 	help(message, bot);
+	helpaudio(message, bot);
 	join(message, bot);
 	srvdiscord(message, bot);
 	ping(message, bot);
