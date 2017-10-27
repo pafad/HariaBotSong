@@ -18,7 +18,6 @@ bot.on("guildMemberAdd", function (member) {
 // ANNONCE
 const annonce = require("./modules/owner/annonce.js");
 const botmessage = require("./modules/owner/botmessage.js");
-const owneronly = require("./modules/owner/owneronly.js");
 
 // AIDE (HELP)
 const help = require("./modules/help.js");
@@ -60,7 +59,6 @@ const insulte = require("./modules/bruits/insulte.js")
 bot.on("message", message => {
 	annonce(message, bot);
 	botmessage(message, bot);
-	owneronly(message, bot);
 	help(message, bot);
 	helpaudio(message, bot);
 	join(message, bot);
