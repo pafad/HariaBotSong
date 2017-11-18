@@ -8,5 +8,5 @@ if (message.content == "h$offline") {
             process.exit();
         } else {
             message.channel.send(":x: **Erreur** :x: ! Tu n'es pas l'owner !")}
-    }}};
+    }}}
     module.exports = offline;
