@@ -1,5 +1,5 @@
 function offline(message, bot) {
-if (message.content == "h$offline") {
+if (message.content == "h$offline")) {
         if(message.author.id == "300896265078571009") {
             message.channel.send("Arrêt en cours ...");
 
