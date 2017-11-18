@@ -36,6 +36,7 @@ const ping = require("./modules/other/ping.js");
 
 // AUTRES
 const say = require("./modules/owner/say.js");
+const offline = require ("./modules/offline.js");
 
 // MODÉRATION
 const ban = require("./modules/modo/ban.js");
@@ -72,6 +73,7 @@ bot.on("message", message => {
 	say(message, bot);
 	insulte(message, bot);
 	help(message, bot)
+	offline(message, bot)
 	webradio(message, bot, connection, broadcast);
 });
 
