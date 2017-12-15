@@ -25,8 +25,6 @@ function help(message, bot) {
 				"**Commandes audio :**\n\n" +
 				":white_check_mark:h$helpaudio: Listes des commandes audio (MP).\n" +
 				":white_check_mark:h$helpaudioici: Listes des commandes audio (serveur)."
-			}
-		});
+			}};
 	}
-
 module.exports = help;
