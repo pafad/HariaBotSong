@@ -60,3 +60,4 @@ function help (message, bot) {
 		});
 	}
 }
+module.exports = help;
