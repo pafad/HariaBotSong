@@ -5,7 +5,7 @@ const connection = new Map();
 let broadcast;
 
 bot.on("ready", function() {
-    bot.user.setGame(`h$help | Sur ${bot.guilds.size} serveurs, Bêta v2.5 by Hariamane`, "https://www.twitch.tv/Hariamane")
+    bot.user.setGame(`h$help/h$helpici|Sur ${bot.guilds.size} serveurs, Bêta v2.5 by Hariamane`, "https://www.twitch.tv/Hariamane")
 });
 
 // Envoi un MP lorsqu'un nouvel utilisateur arrive sur un serveur Discord
@@ -71,7 +71,6 @@ bot.on("message", message => {
 	support(message, bot);
 	say(message, bot);
 	insulte(message, bot);
-	help(message, bot);
 	webradio(message, bot, connection, broadcast);
 });
 
