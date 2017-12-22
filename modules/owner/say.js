@@ -1,4 +1,4 @@
-function say(message, bot) {
+function say (message, bot) {
     if (message.content.startsWith("h$say")) {
         var msg = message.content.substr(6);
         message.delete(message.author)
