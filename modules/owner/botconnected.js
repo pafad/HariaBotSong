@@ -1,6 +1,7 @@
 function botconnected (message, bot) {
 	if(message.content === "h$botconnected") {
 		if(message.author.id === "300896265078571009") {
+			message.channel.send({embed:{ color: 0xFF0000, description:":envelope_with_arrow: liste des serveur auquel j'y suis envoyé !"}})
 			message.author.send("`Je suis connecté sur ces serveurs :\n`")
 			.then(m => {
 				bot.guilds.map(g => {
