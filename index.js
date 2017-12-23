@@ -36,7 +36,7 @@ const ping = require("./modules/other/ping.js");
 
 // AUTRES
 const say = require("./modules/owner/say.js")
-const botconnected? = require("./modules/owner/botconnected?.js")
+const botconnected = require("./modules/owner/botconnected.js")
 
 // MODÉRATION
 const ban = require("./modules/modo/ban.js");
@@ -58,7 +58,7 @@ const insulte = require("./modules/bruits/insulte.js")
 
 bot.on("message", message => {
 	annonce(message, bot);
-	botconnected?(message, bot);
+	botconnected(message, bot);
 	botmessage(message, bot);
 	help(message, bot);
 	helpaudio(message, bot);
