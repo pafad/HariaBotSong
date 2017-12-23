@@ -14,7 +14,7 @@ function help (message, bot) {
 				":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n\n" +
 				"**Autres commandes :**\n\n"+
 				":white_check_mark:h$say : Faire parler le bot.\n" +
-			        ":white_check_mark:h$botconnected? : Pour savoir si le bot est connecté.\n" +
+			        ":white_check_mark:h$botconnected : Pour savoir si le bot est connecté.\n" +
 				":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n\n" +
 				"**Commandes modérateur :**\n\n" +
 				":white_check_mark:h$ban : Cette commande c'est pour ban un utilisateur.\n" +
@@ -45,7 +45,7 @@ function help (message, bot) {
 				":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n\n" +
 				"**Autres commandes :**\n\n"+
 				":white_check_mark:h$say : Faire parler le bot.\n" +
-			        ":white_check_mark:h$botconnected? : Pour savoir si le bot est connecté.\n" +
+			        ":white_check_mark:h$botconnected : Pour savoir si le bot est connecté.\n" +
 				":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n\n" +
 				"**Commandes modérateur :**\n\n" +
 				":white_check_mark:h$ban : Cette commande c'est pour ban un utilisateur.\n" +
