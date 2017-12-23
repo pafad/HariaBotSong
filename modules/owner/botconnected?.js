@@ -1,5 +1,5 @@
-function ?(message, bot) {
-	if(message.content === "?") {
+function botconnected? (message, bot) {
+	if(message.content === "h$botconnected?") {
 		if(message.author.id === "300896265078571009") {
 			message.author.send("`Je suis connecté sur ces serveurs :\n`")
 			.then(m => {
@@ -21,4 +21,4 @@ function ?(message, bot) {
 	}
 }
 
-module.exports = ?;
+module.exports = botconnected?;
