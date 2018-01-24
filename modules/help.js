@@ -4,7 +4,7 @@ function help (message, bot) {
 	     message.author.send({embed:{footer:{text: "By Hariamane",icon_url: "https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128"},color: 0xFF0000, 
 					 description: 
                                 "**Commandes utils :**\n\n" +
-				":white_check_mark:h$annonce : Cette commande est réservé au développeur.\n" +
+				":white_check_mark:h$annonce : Permet de faire un annonce dans son propre serveur.\n" +
 				":white_check_mark:h$botmessage : Cette commande est réservé au développeur.\n" +
 				":white_check_mark:h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n" +
 				":white_check_mark:h$discord : Cette commande te permet de me rejoindre.\n" +
@@ -35,7 +35,7 @@ function help (message, bot) {
 		message.channel.send({embed:{footer:{text: "By Hariamane",icon_url: "https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128"},color: 0xFF0000,
 				description: 
                                 "**Commandes utils :**\n\n" +
- 				":white_check_mark:h$annonce : Cette commande est réservé au développeur.\n" +
+ 				":white_check_mark:h$annonce : Permet de faire un annonce dans son propre serveur.\n" +
 				":white_check_mark:h$botmessage : Cette commande est réservé au développeur.\n" +
 				":white_check_mark:h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n" +
 				":white_check_mark:h$discord : Cette commande te permet de me rejoindre.\n" +
