@@ -41,8 +41,6 @@ const botconnected = require("./modules/owner/botconnected.js")
 // MODÉRATION
 const ban = require("./modules/modo/ban.js");
 const kick = require("./modules/modo/kick.js");
-const purge = require("./modules/modo/purge.js");
-
 
 // RADIO
 const webradio = require("./modules/perso/webradio.js");
@@ -67,7 +65,6 @@ bot.on("message", message => {
 	ping(message, bot);
 	ban(message, bot);
 	kick(message, bot);
-	purge(message, bot);
 	say(message, bot);
 	bruits(message, bot);
 	support(message, bot);
