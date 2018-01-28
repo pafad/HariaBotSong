@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const connection = new Map();
 let broadcast;
+const prefix = "h$"
 
 bot.on("ready", function() {
     bot.user.setGame(`h$help/h$helpici|Sur ${bot.guilds.size} serveurs, Bêta v2.5 by Hariamane`, "https://www.twitch.tv/Hariamane")
@@ -14,6 +15,19 @@ bot.on("guildMemberAdd", function (member) {
 		return channel.send("Bienvenue sur le serveur," +serveur.name + member.displayName)
 	}).catch(console.error);
 });
+
+//pour que les commandes marchent !
+  if(!message.content.startsWith(prefix))return;
+  // La meilleure façon de définir args. aie confiance !
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+
+  try {
+    let commandFile = require(`./commandes/${command}.js`);
+    commandFile.run(client, message, args);
+  } catch (err){
+  return;
+  }
 
 // ANNONCE
 const annonce = require("./modules/owner/annonce.js");
