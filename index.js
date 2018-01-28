@@ -35,8 +35,9 @@ const srvdiscord = require("./modules/other/srvdiscord.js");
 const ping = require("./modules/other/ping.js");
 
 // AUTRES
-const say = require("./modules/owner/say.js")
-const botconnected = require("./modules/owner/botconnected.js")
+const say = require("./modules/owner/say.js");
+const botconnected = require("./modules/owner/botconnected.js");
+const afk = require(".modules/other/afk.js");
 
 // MODÉRATION
 const ban = require("./modules/modo/ban.js");
@@ -66,6 +67,7 @@ bot.on("message", message => {
 	ban(message, bot);
 	kick(message, bot);
 	say(message, bot);
+	afk(message, bot);
 	bruits(message, bot);
 	support(message, bot);
 	insulte(message, bot);
