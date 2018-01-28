@@ -1,5 +1,4 @@
 {
-    "token": "NDA3MjEwNjg0MTIwODI1ODU2.DU-MSQ.kBKajPntRWtcVkZB1_L-Hp7ymVs",
 	"servers": [
 		"406877497117114389"
 		"407117281404125185"
@@ -9,6 +8,5 @@
 	"speed": 60000
   ,
 	"logging": false,
-  "adminID": "306119836503900161",
 "passes": 1 
 }
