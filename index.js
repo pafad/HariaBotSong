@@ -110,8 +110,6 @@ function changeColor() {
  	say(message, bot);
  	support(message, bot);
 	 webradio(message, bot, connection, broadcast);
-	 eval(message, bot, args);
-	 purge(message, bot, args);
 	 afk(message, bot);
  });
  
