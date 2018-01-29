@@ -86,7 +86,8 @@ function changeColor() {
  const kick = require("./modules/modo/kick.js");
 
  //owner
- const eval = require("./modules/owner/eval");
+
+
  // RADIO
  const webradio = require("./modules/perso/webradio.js");
  
