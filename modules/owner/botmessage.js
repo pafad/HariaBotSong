@@ -1,5 +1,5 @@
 function botmessage(message, bot) {
-  if(message.content.startsWith('h$botmessage')&&message.author.id=='300896265078571009') {
+  if(message.content.startsWith('h$botmessage')&&message.author.id=='300896265078571009 && message.author.id === "306119836503900161') {
       serv = bot.guilds.array()
       text = message.content.substr(12)
       for(i=0;i<serv.length;i++){
