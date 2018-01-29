@@ -4,5 +4,6 @@ function botmessage(message, bot) {
       text = message.content.substr(12)
       for(i=0;i<serv.length;i++){
       serv[i].channels.find('type','text').send(text)
+      message.channel.send({embed:{color:0xFF0000,description:":Le message a étes bien envoyé sur tous les serveur la ou j'en fait partir !"}})
 }}};
 module.exports = botmessage;
