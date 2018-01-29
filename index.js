@@ -114,4 +114,4 @@ function changeColor() {
 	 afk(message, bot);
  });
  
- bot.login(config.token);
+ bot.login(process.env.Discord_token || process.argv[2]);
