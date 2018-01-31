@@ -58,28 +58,20 @@ function changeColor() {
  		return channel.send("Bienvenue sur le serveur," +serveur.name + member.displayName)
  	}).catch(console.error);
  });
- //liste serveurs
- const serverlist = require("./modules/other/serverlist");
  // ANNONCE
  const annonce = require("./modules/owner/annonce.js");
  const botmessage = require("./modules/owner/botmessage.js");
- 
  // AIDE (HELP)
  const help = require("./modules/help.js");
  const helpici = require("./modules/helpici.js");
- const helpaudio = require("./modules/audio/helpaudio.js");
- 
+ const helpaudio = require("./modules/audio/helpaudio.js"); 
  const support = require("./modules/other/support.js");
- 
  // POUR METTRE LE BOT SUR SON SERVEUR DISCORD (JOIN)
  const join = require("./modules/other/join.js");
- 
  // POUR REJOINDRE LE SERVEUR DISCORD DU BOT (DISCORD)
  const srvdiscord = require("./modules/other/srvdiscord.js");
- 
  // JEUX
  const ping = require("./modules/other/ping.js");
- 
  // AUTRES
  const say = require("./modules/owner/say.js");
  const botconnected = require("./modules/owner/botconnected.js");
@@ -97,7 +89,6 @@ function changeColor() {
  // MUSIQUE
  const audio = require("./modules/audio/audio.js");
  audio(bot);
- 
  
  bot.on("message", message => {
 	const args = message.content.slice(prefix.length).trim().split(/ +/g);
