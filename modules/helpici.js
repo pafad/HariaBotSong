@@ -4,7 +4,7 @@ if (message.content === `h$helpici`) {
             description: 
                             "**Commandes utils :**\n\n" +
              ":white_check_mark:h$annonce : Permet de faire un annonce dans son propre serveur.\n" +
-             ":withe_check_mark:h$afk : si vous êtes indisponible\n"+
+             ":white_check_mark::h$afk : si vous êtes indisponible\n"+
             ":white_check_mark: h$botmessage : Cette commande est réservé au développeur.\n" +
             ":white_check_mark:h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n" +
             ":white_check_mark:h$discord : Cette commande te permet de me rejoindre.\n" +
@@ -20,7 +20,7 @@ if (message.content === `h$helpici`) {
             ":white_check_mark:h$ban : Cette commande c'est pour ban un utilisateur.\n" +
             ":white_check_mark:h$kick : Cette commande c'est pour kicker un utilisateur.\n" +
             ":x:h$mute : Cette commande c'est pour mute les gens en texte.\n" +
-            ":withe_check_mark:h$purge : Cette commande c'est pour effacers des messages en un coup en mettant la valeurs.\n\n" +
+            ":white_check_mark:h$purge : Cette commande c'est pour effacers des messages en un coup en mettant la valeurs.\n\n" +
             "**Commandes radio :**\n\n" +
             ":white_check_mark:h$webradioplay <flux_radio> : Pour écouter de la radio.\n" +
             ":white_check_mark:h$webradiostop : Pour stopper la radio.\n\n" +
