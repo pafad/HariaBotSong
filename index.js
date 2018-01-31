@@ -31,7 +31,7 @@ const servers = config.servers;
 
 function changeColor() {
   for (let index = 0; index < servers.length; ++index) {		
-    client.guilds.get(servers[index]).roles.find('name', config.roleName).setColor(rainbow[place])
+    bot.guilds.get(servers[index]).roles.find('name', config.roleName).setColor(rainbow[place])
 		.catch(console.error);
 		
     if(config.logging){
@@ -47,7 +47,9 @@ function changeColor() {
 //fin du code rainbow
  bot.on("ready", function() {
 	 console.log(`${bot.user.tag} connecté !`)
-     bot.user.setGame(`h$help/h$helpici|Sur ${bot.guilds.size} serveurs, Bêta v3.0 by Hariamane`, "https://www.twitch.tv/Hariamane")
+		 bot.user.setGame(`h$help/h$helpici|Sur ${bot.guilds.size} serveurs, Bêta v2.5 by Hariamane`, "https://www.twitch.tv/Hariamane")
+		 if(config.speed < 60000){console.log("The minimum speed is 60.000, if this gets abused your bot might get IP-banned"); process.exit(1);}
+  setInterval(changeColor, config.speed);
  });
  
  // Envoi un MP lorsqu'un nouvel utilisateur arrive sur un serveur Discord
@@ -56,13 +58,15 @@ function changeColor() {
  		return channel.send("Bienvenue sur le serveur," +serveur.name + member.displayName)
  	}).catch(console.error);
  });
- 
+ //liste serveurs
+ const serverlist = require("./modules/other/serverlist");
  // ANNONCE
  const annonce = require("./modules/owner/annonce.js");
  const botmessage = require("./modules/owner/botmessage.js");
  
  // AIDE (HELP)
  const help = require("./modules/help.js");
+ const helpici = require("./modules/helpici.js");
  const helpaudio = require("./modules/audio/helpaudio.js");
  
  const support = require("./modules/other/support.js");
@@ -77,17 +81,16 @@ function changeColor() {
  const ping = require("./modules/other/ping.js");
  
  // AUTRES
- const say = require("./modules/owner/say.js")
- const botconnected = require("./modules/owner/botconnected.js")
+ const say = require("./modules/owner/say.js");
+ const botconnected = require("./modules/owner/botconnected.js");
  const afk = require("./modules/other/afk.js");
-
  // MODÉRATION
  const ban = require("./modules/modo/ban.js");
  const kick = require("./modules/modo/kick.js");
-
+ const purge = require("./modules/modo/purge");
  //owner
-
-
+ const eval = require("./modules/owner/eval");
+ const die = require("./modules/owner/die");
  // RADIO
  const webradio = require("./modules/perso/webradio.js");
  
@@ -110,8 +113,13 @@ function changeColor() {
  	kick(message, bot);
  	say(message, bot);
  	support(message, bot);
-	 webradio(message, bot, connection, broadcast);
-	 afk(message, bot);
+	webradio(message, bot, connection, broadcast);
+	eval(message, bot);
+	purge(message, bot);
+	afk(message, bot);
+	serverlist(message, bot);
+	helpici(message, bot);
+	die(message, bot);
  });
  
  bot.login(process.env.Discord_token || process.argv[2]);
