@@ -5,7 +5,7 @@ function help (message, bot, prefix){
 					 description: 
 					 "**Commandes utils :**\n\n" +
 					 ":white_check_mark:h$annonce : Permet de faire un annonce dans son propre serveur.\n" +
-					 ":withe_check_mark:h$afk : si vous êtes indisponible"+
+					 ":withe_check_mark:h$afk : si vous êtes indisponible" +
 					":white_check_mark:h$botmessage : Cette commande est réservé au développeur.\n" +
 					":white_check_mark:h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n" +
 					":white_check_mark:h$discord : Cette commande te permet de me rejoindre.\n" +
