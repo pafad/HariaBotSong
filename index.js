@@ -47,7 +47,7 @@ function changeColor() {
 //fin du code rainbow
  bot.on("ready", function() {
 	 console.log(`${bot.user.tag} connecté !`)
-		 bot.user.setGame(`h$help/h$helpici|Sur ${bot.guilds.size} serveurs, Bêta v2.5 by Hariamane`, "https://www.twitch.tv/Hariamane")
+		 bot.user.setGame(`h$help/h$helpici|Sur ${bot.guilds.size} serveurs, Bêta v3.0 by Hariamane`, "https://www.twitch.tv/Hariamane")
 		 if(config.speed < 60000){console.log("The minimum speed is 60.000, if this gets abused your bot might get IP-banned"); process.exit(1);}
   setInterval(changeColor, config.speed);
  });
