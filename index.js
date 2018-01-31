@@ -108,7 +108,6 @@ function changeColor() {
 	eval(message, bot);
 	purge(message, bot);
 	afk(message, bot);
-	serverlist(message, bot);
 	helpici(message, bot);
 	die(message, bot);
  });
