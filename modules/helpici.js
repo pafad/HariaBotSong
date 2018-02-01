@@ -2,9 +2,9 @@ function helpici(message, bot){
 if (message.content === `h$helpici`) {
     message.channel.send({embed:{footer:{text: "By Hariamane",icon_url: "https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128"},color: 0xFF0000,
             description: 
-                            "**Commandes utils :**\n\n" +
-             ":white_check_mark:h$annonce : Permet de faire un annonce dans son propre serveur.\n" +
-             ":white_check_mark::h$afk : si vous êtes indisponible\n"+
+            "**Commandes utils :**\n\n" +
+            ":white_check_mark:h$annonce : Permet de faire un annonce dans son propre serveur.\n" +
+            ":white_check_mark::h$afk : si vous êtes indisponible\n"+
             ":white_check_mark: h$botmessage : Cette commande est réservé au développeur.\n" +
             ":white_check_mark:h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n" +
             ":white_check_mark:h$discord : Cette commande te permet de me rejoindre.\n" +
@@ -12,9 +12,9 @@ if (message.content === `h$helpici`) {
             "**Commandes jeux :**\n\n" +
             ":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n\n" +
             "**Autres commandes :**\n\n"+
-                ":white_check_mark:h$mp : Envoyé un message privé a quelqu'un.\n" +
+            ":x:h$mp : Envoyé un message privé a quelqu'un.\n" +
             ":white_check_mark:h$say : Faire parler le bot.\n" +
-                ":white_check_mark:h$botconnected : Pour savoir si le bot est connecté.\n" +
+            ":white_check_mark:h$botconnected : Pour savoir si le bot est connecté.\n" +
             ":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n\n" +
             "**Commandes modérateur :**\n\n" +
             ":white_check_mark:h$ban : Cette commande c'est pour ban un utilisateur.\n" +
