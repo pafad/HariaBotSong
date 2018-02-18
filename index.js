@@ -76,7 +76,7 @@ function changeColor() {
  const say = require("./modules/owner/say.js");
  const botconnected = require("./modules/owner/botconnected.js");
  const afk = require("./modules/other/afk.js");
- const rainbow = require("./modules/other/Rainbow [Demande].js");
+ const rainbow = require("./modules/other/Rainbow.js");
  // MODÉRATION
  const ban = require("./modules/modo/ban.js");
  const kick = require("./modules/modo/kick.js");
