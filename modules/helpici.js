@@ -14,7 +14,7 @@ if (message.content === `h$helpici`) {
 					":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n\n" +
 					"**Autres commandes :**\n\n"+
 					":x:h$mp : Envoyer un message privé a quelqu'un.\n" +
-					":white_check_mark:h$rainbow : Demandez un rainbow pour son serveur.\n" +
+					":white_check_mark:h$Rainbow : Demandez un rainbow pour son serveur.\n" +
 					":white_check_mark:h$say : Faire parler le bot.\n" +
 					":white_check_mark:h$botconnected : Pour savoir si le bot est connecté.\n" +
 					":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n\n" +
