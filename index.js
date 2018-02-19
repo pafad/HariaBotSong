@@ -76,7 +76,7 @@ function changeColor() {
  const say = require("./modules/owner/say.js");
  const botconnected = require("./modules/owner/botconnected.js");
  const afk = require("./modules/other/afk.js");
- const rainbow = require("./modules/other/rainbow.js");
+ const Rainbow = require("./modules/other/rainbow.js");
  // MODÉRATION
  const ban = require("./modules/modo/ban.js");
  const kick = require("./modules/modo/kick.js");
@@ -97,7 +97,7 @@ function changeColor() {
  	botconnected(message, bot);
  	botmessage(message, bot);
  	help(message, bot);
-	rainbow(message, bot)
+	Rainbow(message, bot)
  	helpaudio(message, bot);
  	join(message, bot);
  	srvdiscord(message, bot);
