@@ -4,7 +4,7 @@ function audio(bot) {
 	var request = require("request");
 	var opts = {
 		maxResults: 1,
-		key: "AIzaSyAgwJ2eFLG8U53oSwukzAO1G5ScZ55vyN8"
+		key: "AIzaSyD9spKtN7MIp84ujaN6JkwGDHHP22OwuzY"
 	};
 
 	let queue = {};
@@ -99,7 +99,7 @@ function audio(bot) {
 				console.log(autre)
 
 				if(autre == tester) {
-					var api = "&key=AIzaSyAgwJ2eFLG8U53oSwukzAO1G5ScZ55vyN8";
+					var api = "&key=AIzaSyD9spKtN7MIp84ujaN6JkwGDHHP22OwuzY";
 					var listing = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=";
 					var ide = msg.content.substr(47);
 					console.log(ide)
