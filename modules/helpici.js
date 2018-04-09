@@ -1,9 +1,8 @@
 function helpici(message, bot){
 if (message.content === `h$helpici`) {
-    message.channel.send({embed:{footer:{text: "By Hariamane",icon_url: "https://cdn.discordapp.com/avatars/300896265078571009/853decbb9091b9a045c198c68e4866eb.png?size=128"},color: 0xFF0000,
-            description: 
-            "**Commandes utils :**\n\n" +
-					 "**Commandes utils :**\n\n" +
+    message.channel.send({embed:{footer:{text: "By !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨",icon_url: "https://cdn.discordapp.com/avatars/300896265078571009/599f13a95e220e4e24e16480d6635648.png?size=2048"},color: 0xFF0000,
+                                        description: 
+                                        "**Commandes utils :**\n\n" +
 					":white_check_mark:h$annonce : Permet de faire un annonce dans son propre serveur.\n" +
 					":white_check_mark:h$afk : si vous êtes indisponible.\n"+
 					":white_check_mark:h$botmessage : Cette commande est réservé au développeur.\n" +
