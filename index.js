@@ -51,7 +51,7 @@ bot.on("ready", function() {
 	let games = [prefix + `help | `+ bot.guilds.size +` serveur(s) avec `+ bot.users.size +` utilisateur(s) connecté(s) au total`, 
         `HariaBotSong est un bot multifonction crée par !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨`, `Besoin de savoir les commandes disponible ? Taper `+ prefix +`help`];
         setInterval(() => {
-            client.user.setActivity(games[Math.floor(Math.random() * games.length)], {url: "https://twitch.tv/hariamane", type: "STREAMING"})
+            bot.user.setActivity(games[Math.floor(Math.random() * games.length)], {url: "https://twitch.tv/hariamane", type: "STREAMING"})
         },20000);
 	
 	if(config.speed < 60000){console.log("The minimum speed is 60.000, if this gets abused your bot might get IP-banned"); process.exit(1);}
