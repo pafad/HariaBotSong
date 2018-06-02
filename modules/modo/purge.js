@@ -1,6 +1,6 @@
 function purge(message, bot) {
     if(message.content === "h$purge") {
-        let myrole = message.guild.member(client.user).hasPermission("MANAGE_MESSAGES"); //Récupère les droits nécessaires
+        let myrole = message.guild.member(bot.user).hasPermission("MANAGE_MESSAGES"); //Récupère les droits nécessaires
 		let yourole = message.guild.member(message.author).hasPermission("MANAGE_MESSAGES"); //Récupère les droits nécessaires
 
 		if (!myrole) { 
@@ -21,7 +21,7 @@ function purge(message, bot) {
 			limit: amount,
 		}).then((messages) => {
 			if (user) {
-				const filterBy = user ? user.id : client.user.id;
+				const filterBy = user ? user.id : bot.user.id;
 				messages = messages.filter(m => m.author.id === filterBy).array().slice(0, amount);
 			}
 			message.channel.bulkDelete(messages).then(ok =>
