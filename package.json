@@ -3,22 +3,24 @@
   "version": "1.0.0",
   "description": "bot discord",
   "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
   "dependencies": {
-    "discord.js": "^11.2.1",
-    "erlpack": "github:hammerandchisel/erlpack",
+    "discord.js": "^11.3.0",
+    "erlpack": "^0.1.2",
     "ffmpeg": "0.0.4",
     "ffmpeg-binaries": "^3.2.2",
+    "fs": "0.0.1-security", 
     "http": "0.0.0",
-    "node-opus": "^0.2.6",
+    "node-opus": "^0.2.9",
     "mysql": "^2.15.0",
-    "request": "^2.81.0",
-    "youtube-search": "^1.0.9",
-    "ytdl-core": "^0.14.0"
+    "request": "^2.85.0",
+    "util": "^0.10.3",
+    "youtube-search": "^1.1.0",
+    "ytdl-core": "^0.20.1"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hariamane/HariaBotSong.git"
