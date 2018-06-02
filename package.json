@@ -19,16 +19,5 @@
     "util": "^0.10.3",
     "youtube-search": "^1.1.0",
     "ytdl-core": "^0.20.1"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Hariamane/HariaBotSong.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Hariamane/HariaBotSong/issues"
-  },
-  "homepage": "https://github.com/Hariamane/HariaBotSong#readme"
+  }
 }
