@@ -19,7 +19,7 @@ function vcs_ban(message, bot) {
                     objet[args] = {};
 
                     request({ url: url, method: 'PUT', json: objet});
-                    bot.channels.findAll('name', 'vcs').map(c => c.send('', {
+                    bot.channels.findAll('name', 'haria-vcs').map(c => c.send('', {
                         embed: {
                             color: Math.floor(Math.random() * 16777214) + 1,
                             fields: [{
