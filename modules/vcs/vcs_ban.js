@@ -7,9 +7,10 @@ function vcs_ban(message, bot) {
         var args = message.content.split(" ");
 
         if(message.author.id === "300896265078571009" || message.author.id === "130979396134633472") {
-            var url = "https://api.myjson.com/bins/gguwi";
+            var url = "https://api.myjson.com/bins/cdlz6";
 
-            request(url, (err, res, body) => {    
+            request(url, (err, res, body) => {
+                console.log(args);
                 console.log('Chargement ...');
 
                 if(err || res.statusCode !== 200) return;
