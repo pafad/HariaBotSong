@@ -10,14 +10,13 @@ function help (message, bot, prefix){
 					":white_check_mark:h$join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n" +
 					":white_check_mark:h$discord : Cette commande te permet de me rejoindre.\n" +
 					":white_check_mark:h$support : Cette commande te permet de contacter le support technique du bot.\n\n" +
-					"**Commandes jeux :**\n\n" +
-					":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n\n" +
 					"**Autres commandes :**\n\n"+
 					":x:h$mp : Envoyer un message privé a quelqu'un.\n" +
 					":white_check_mark:h$Rainbow : Demandez un rainbow pour son serveur.\n" +
 					":white_check_mark:h$say : Faire parler le bot.\n" +
 					":white_check_mark:h$botconnected : Pour savoir si le bot est connecté.\n" +
-					":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n\n" +
+					":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n"
+                                        ":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n\n" +
 					"**Commandes modérateur :**\n\n" +
 					":white_check_mark:h$ban : Cette commande c'est pour ban un utilisateur.\n" +
 					":white_check_mark:h$kick : Cette commande c'est pour kicker un utilisateur.\n" +
