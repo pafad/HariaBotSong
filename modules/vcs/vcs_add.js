@@ -45,4 +45,4 @@
         }))
     }
 })
-module.exports = vcs;
+module.exports = vcs_add;
