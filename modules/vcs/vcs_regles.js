@@ -40,4 +40,4 @@ function vcs_regles(bot, message) {
         })
     }
 }
-module.exports = vcs;
+module.exports = vcs_regles;
