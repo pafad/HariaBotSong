@@ -1,4 +1,4 @@
-fonction vcs-regles(bot, message) {
+fonction vcs_regles(bot, message) {
     if(message.channel.name !== "vcs"){
         return;
     }else{
