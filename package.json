@@ -19,5 +19,6 @@
     "util": "^0.10.3",
     "youtube-search": "^1.1.0",
     "ytdl-core": "^0.20.1"
+    "superagent": "^3.8.3"
   }
 }
