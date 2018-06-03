@@ -23,7 +23,7 @@ function vcs_help(message, bot) {
                 timestamp: new Date(),
                 footer: {
                     text: "vcshelp by !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨",
-                    icon_url: client.user.avatarURL
+                    icon_url: bot.user.avatarURL
                 }
             }
         })
