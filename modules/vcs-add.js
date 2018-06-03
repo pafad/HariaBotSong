@@ -35,11 +35,11 @@
         },
         {
           name:"Amusez-vous bien !",
-          value: "Cordialement: @⚡Electrika⚡"
+          value: "Cordialement: !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨"
         }],
        timestamp: new Date(),
        footer:{
-           text:"règlement by @⚡Electrika⚡"
+           text:"règlement by !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨"
         }    
         }
         }))
