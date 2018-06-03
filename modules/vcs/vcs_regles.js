@@ -1,5 +1,5 @@
 function vcs_regles(bot, message) {
-    if(message.channel.name !== "vcs"){
+    if(message.channel.name === "vcs"){
         return;
     }else{
         message.channel.send({embed:{ 
