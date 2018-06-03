@@ -1,6 +1,6 @@
 const fs = require("fs")
 const superagent = require("superagent")
-fonction vcs_ban(bot, message) {
+function vcs_ban(bot, message) {
 var args = message.content.split(" ")
 if(message.author.id == "300896265078571009"){
 var url = "https://api.myjson.com/bins/gguwi";
