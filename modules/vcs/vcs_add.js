@@ -5,7 +5,7 @@ function vcs_add(message, bot) {
             return;
         } else {
             message.channel.send("channel #vcs ajouté vous pouvez parler en faisant **h$vcs [texte]** sans les [].");
-            message.guild.createChannel("vcs").then(c => c.send({
+            message.guild.createChannel("hariavcs").then(c => c.send({
                 embed: {
                     color: Math.floor(Math.random() * 16777214) + 1,
                     fields: [{
