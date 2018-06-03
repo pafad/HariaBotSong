@@ -1,4 +1,4 @@
-function vcs(bot, message){
+function vcs(message, bot) {
 if(message.content === "h$vcs"){
     if(message.channel.type === "dm") return;
     if(!message.guild.channels.exists("name", "vcs")){
