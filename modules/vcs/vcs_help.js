@@ -1,27 +1,33 @@
-function vcs_help(bot, message) {
-    message.channel.send({embed:{ color: Math.floor(Math.random() * 16777214) + 1,
-    title: "commande de vcs",
-    fields:[{
-        name: "vcs <texte>",
-        value:"pour envoyer une message pour tous les channels `vcs`"
-        },
-        {
-        name: "vcs-image",
-        value:"pour partager une image dans les channels `vcs`"
-        },
-        {
-        name: "vcs-regles",
-        value:"règlement du vcs"
-        },
-        {
-        name:"vcs-ban",
-        value:"pour ban quelqu'un du vcs (uniquement modo !)"  
-        }],
-        timestamp: new Date(),
-        footer:{
-            text: "vcs-help by !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨",
-            icon_url: client.user.avatarURL
-        }
-    }})
+function vcs_help(message, bot) {
+    if(message.content === "h$vcshelp") {
+        message.channel.send({
+            embed: {
+                color: Math.floor(Math.random() * 16777214) + 1,
+                title: "Commandes de vcs",
+                fields: [{
+                    name: "h$vcs <texte>",
+                    value: "Pour envoyer une message pour tous les channels `vcs`"
+                },
+                {
+                    name: "h$vcsimage",
+                    value: "Pour partager une image dans les channels `vcs`"
+                },
+                {
+                    name: "h$vcsregles",
+                    value: "Règlement du vcs"
+                },
+                {
+                    name: "h$vcsban",
+                    value: "Pour ban quelqu'un du vcs (uniquement modo !)"  
+                }],
+                timestamp: new Date(),
+                footer: {
+                    text: "vcshelp by !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨",
+                    icon_url: client.user.avatarURL
+                }
+            }
+        })
+    }
 }
+
 module.exports = vcs_help;
