@@ -1,4 +1,4 @@
-fuction(vcs) => {
+fuction vcs(bot, message) {
 if(message.content === "h$vcs"){
     if(message.channel.type === "dm") return;
     if(!message.guild.channels.exists("name", "vcs")){
