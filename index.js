@@ -93,10 +93,10 @@ const vcs_add = require ("./modules/vcs/vcs_add.js");
 // MODÉRATION
 const ban = require("./modules/modo/ban.js");
 const kick = require("./modules/modo/kick.js");
-const purge = require("./modules/modo/purge");
+const purge = require("./modules/modo/purge.js");
 //owner
-const eval = require("./modules/owner/eval");
-const die = require("./modules/owner/die");
+const eval = require("./modules/owner/eval.js");
+const die = require("./modules/owner/die.js");
 // RADIO
 const webradio = require("./modules/perso/webradio.js");
 
@@ -108,11 +108,11 @@ bot.on("message", message => {
 	const args = message.content.slice(prefix.length).trim().split(/ +/g);
 	annonce(message, bot);
 	vcs(message, bot);
-	vcs_regles(bot, message);
-	vcs_image(bot, message);
-	vcs_help(bot, message);
-	vcs_ban(bot, message);
-	vcs_add(bot, message);
+	vcs_regles(message, bot);
+	vcs_image(message, bot);
+	vcs_help(message, bot);
+	vcs_ban(message, bot);
+	vcs_add(message, bot);
 	botconnected(message, bot);
 	botmessage(message, bot);
 	help(message, bot);
