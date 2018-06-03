@@ -6,13 +6,13 @@ function vcs_ban(message, bot) {
         function vcs_ban(bot, message) {
             var args = message.content.split(" ");
             
-            if(message.author.id == "300896265078571009") {
+            if(message.author.id === "300896265078571009") {
                 var url = "https://api.myjson.com/bins/gguwi";
                 
                 request(url, (err, res, body) => {    
                     console.log('Chargement ...');
                     
-                    if(err || res.statusCode!== 200) return;
+                    if(err || res.statusCode !== 200) return;
                     console.log('Chargé avec succès !');
                     
                     var objet = JSON.parse(body);
