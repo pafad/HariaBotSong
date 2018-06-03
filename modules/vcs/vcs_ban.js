@@ -1,5 +1,6 @@
 function vcs_ban(message, bot) {
     if(message.content === "h$vcsban") {
+        const request = require("request");
         const fs = require("fs");
         const superagent = require("superagent");
         
