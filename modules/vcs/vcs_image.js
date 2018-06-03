@@ -21,8 +21,10 @@ function vcs_image(message, bot) {
                         fields:[{
                             name: ":gear: -> Serveur :",
                             value: message.guild.name
+                        },{
+                            name: "_ _",
+                            value: `${message.author.tag} (${message.author.id})`
                         }],
-                        name: `${message.author.tag}(${message.author.id})`,
                         timestamp: new Date(), 
                         footer: { 
                             text: "hariavcs"
