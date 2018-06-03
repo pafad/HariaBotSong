@@ -31,3 +31,4 @@ if(message.content === "h$vcs"){
     }
  }
 }
+module.exports = vcs;
