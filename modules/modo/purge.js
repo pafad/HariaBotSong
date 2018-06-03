@@ -1,6 +1,6 @@
 function purge(message, bot) {
-    if(message.content === "h$purge") {
-        let myrole = message.guild.member(bot.user).hasPermission("MANAGE_MESSAGES"); //Récupère les droits nécessaires
+	if(message.content === "h$purge") {
+		let myrole = message.guild.member(bot.user).hasPermission("MANAGE_MESSAGES"); //Récupère les droits nécessaires
 		let yourole = message.guild.member(message.author).hasPermission("MANAGE_MESSAGES"); //Récupère les droits nécessaires
 
 		if (!myrole) { 
@@ -29,7 +29,7 @@ function purge(message, bot) {
 				.then(message => setTimeout(function(){message.delete()}, 1000))
 			).catch(error => console.log(error.stack));
 		});
-    }
+	}
 }
 
 module.exports = purge;
