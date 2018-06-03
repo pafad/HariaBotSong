@@ -1,6 +1,6 @@
 function vcs_regles(message, bot) {
     if(message.content === "h$vcsregles") {
-        if(message.channel.name === "haria-vcs") {
+        if(message.channel.name !== "haria-vcs") {
             return;
         } else {
             message.channel.send({
