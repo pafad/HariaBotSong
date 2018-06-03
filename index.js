@@ -107,7 +107,7 @@ audio(bot);
 bot.on("message", message => {
 	const args = message.content.slice(prefix.length).trim().split(/ +/g);
 	annonce(message, bot);
-	vcs(bot, message);
+	vcs(message, bot);
 	vcs_regles(bot, message);
 	vcs_image(bot, message);
 	vcs_help(bot, message);
