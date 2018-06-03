@@ -1,4 +1,4 @@
-fonction vcs_help(bot, message) {
+function vcs_help(bot, message) {
     message.channel.send({embed:{ color: Math.floor(Math.random() * 16777214) + 1,
     title: "commande de vcs",
     fields:[{
