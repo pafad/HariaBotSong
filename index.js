@@ -83,6 +83,13 @@ const say = require("./modules/owner/say.js");
 const botconnected = require("./modules/owner/botconnected.js");
 const afk = require("./modules/other/afk.js");
 const Rainbow = require("./modules/other/rainbow.js");
+const vcs = require ("./modules/vcs.js");
+const vcs = require ("./modules/vcs-regles.js");
+const vcs = require ("./modules/vcs-image.js");
+const vcs = require ("./modules/vcs-help.js");
+const vcs = require ("./modules/vcs-ban.js");
+const vcs = require ("./modules/vcs-add.js");
+
 // MODÉRATION
 const ban = require("./modules/modo/ban.js");
 const kick = require("./modules/modo/kick.js");
@@ -100,6 +107,7 @@ audio(bot);
 bot.on("message", message => {
 	const args = message.content.slice(prefix.length).trim().split(/ +/g);
 	annonce(message, bot);
+	vcs(message, bot);
 	botconnected(message, bot);
 	botmessage(message, bot);
 	help(message, bot);
