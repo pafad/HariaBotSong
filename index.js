@@ -105,7 +105,7 @@ const audio = require("./modules/audio/audio.js");
 audio(bot);
  
 bot.on("message", message => {
-	const args = message.content.slice(prefix.length).trim().split(/ +/g);
+	/* const args = message.content.slice(prefix.length).trim().split(/ +/g); */
 	annonce(message, bot);
 	vcs(message, bot);
 	vcs_regles(message, bot);
