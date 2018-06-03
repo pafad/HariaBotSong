@@ -1,4 +1,4 @@
-exports.run = (client, message) => {
+fonction vcs-regles(bot, message) {
     if(message.channel.name !== "vcs"){
         return;
     }else{
