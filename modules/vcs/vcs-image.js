@@ -1,4 +1,4 @@
-exports.run = (client, message, args) => {
+fonction vcs-image(bot, message, args) {
     if(!message.guild.channels.exists("name", "vcs")){
         message.channel.send("je n'ai pas trouvé de channel nommé `vcs` fait vcs-add pour en créer un.")
         return;
