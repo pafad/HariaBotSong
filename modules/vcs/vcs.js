@@ -1,4 +1,6 @@
-exports.run = (client, message, args) => {
+fuction(vcs) => {
+if(message.content === "h$vcs"){
+    if(message.channel.type === "dm") return;
     if(!message.guild.channels.exists("name", "vcs")){
         message.channel.send("je n'ai pas trouvé de channel nommé `vcs` fait vcs-add pour en créer un.")
         return;
@@ -27,4 +29,5 @@ exports.run = (client, message, args) => {
         }))
         }
     }
+ }
 }
