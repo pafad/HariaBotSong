@@ -84,11 +84,11 @@ const botconnected = require("./modules/owner/botconnected.js");
 const afk = require("./modules/other/afk.js");
 const Rainbow = require("./modules/other/rainbow.js");
 const vcs = require ("./modules/vcs/vcs.js");
-const vcs-regles = require ("./modules/vcs/vcs-regles.js");
-const vcs-image = require ("./modules/vcs/vcs-image.js");
-const vcs-help = require ("./modules/vcs/vcs-help.js");
-const vcs-ban = require ("./modules/vcs/vcs-ban.js");
-const vcs-add = require ("./modules/vcs/vcs-add.js");
+const vcs_regles = require ("./modules/vcs/vcs-regles.js");
+const vcs_image = require ("./modules/vcs/vcs-image.js");
+const vcs_help = require ("./modules/vcs/vcs-help.js");
+const vcs_ban = require ("./modules/vcs/vcs-ban.js");
+const vcs_add = require ("./modules/vcs/vcs-add.js");
 
 // MODÉRATION
 const ban = require("./modules/modo/ban.js");
