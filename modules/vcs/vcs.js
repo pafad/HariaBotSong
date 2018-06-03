@@ -11,8 +11,7 @@ function vcs(message, bot) {
             if(message.channel.name !== "haria-vcs") {
                 return;
             } else {
-                /* bot.channels.findAll("name", "haria-vcs").map(c => c.send({ */
-                message.channels.findAll("name", "haria-vcs").map(c => c.send({
+                bot.channels.findAll("name", "haria-vcs").map(c => c.send({
                     embed: {
                         color: Math.floor(Math.random() * 16777214) + 1,
                         thumbnail: { 
