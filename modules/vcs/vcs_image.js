@@ -28,4 +28,4 @@ function vcs_image(bot, message) {
         }
     }
 }
-module.exports = vcs;
+module.exports = vcs_image;
