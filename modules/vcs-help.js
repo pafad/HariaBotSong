@@ -19,7 +19,7 @@ exports.run = (client, message) => {
         }],
         timestamp: new Date(),
         footer:{
-            text: "vcs-help by @⚡Electrika⚡#8754",
+            text: "vcs-help by !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨,
             icon_url: client.user.avatarURL
         }
     }})
