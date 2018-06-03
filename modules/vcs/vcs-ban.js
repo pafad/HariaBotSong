@@ -1,6 +1,6 @@
 const fs = require("fs")
 const superagent = require("superagent")
-exports.run = (client, message, args) => {
+fonction vcs-ban(bot, message, args) {
 if(message.author.id == "300896265078571009"){
 var url = "https://api.myjson.com/bins/gguwi";
 request(url, (err, res, body) => {
