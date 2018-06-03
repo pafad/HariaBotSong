@@ -4,11 +4,11 @@ function purge(message, bot) {
 		let yourole = message.guild.member(message.author).hasPermission("MANAGE_MESSAGES"); //Récupère les droits nécessaires
 
 		if (!myrole) { 
-			return message.author.send("<:7orNad0_negative_check_mark:400045843287375873> ${message.author} Je n'ai pas les permissions nécessaires pour effacer un/des message(s)");
+			return message.author.send("<:7orNad0_negative_check_mark:400045843287375873> "+ message.author +", je n'ai pas les permissions nécessaires pour effacer un/des message(s)");
 		}
 
 		if (!yourole) {
-			return message.author.send("<:7orNad0_negative_check_mark:400045843287375873> ${message.author} Vous n'avez pas les permissions nécessaires");
+			return message.author.send("<:7orNad0_negative_check_mark:400045843287375873> "+ message.author +", vous n'avez pas les permissions nécessaires");
 		}
 
 		const user = message.mentions.users.first();
