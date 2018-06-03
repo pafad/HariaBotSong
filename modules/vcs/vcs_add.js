@@ -4,8 +4,8 @@ function vcs_add(message, bot) {
             message.channel.send("tu n'as pas la permission de gérer les salons.");
             return;
         } else {
-            message.channel.send("channel #vcs ajouté vous pouvez parler en faisant **h$vcs [texte]** sans les [].");
-            message.guild.createChannel("hariavcs").then(c => c.send({
+            message.channel.send("channel #haria-vcs ajouté vous pouvez parler en faisant **h$vcs [texte]** sans les [].");
+            message.guild.createChannel("haria-vcs").then(c => c.send({
                 embed: {
                     color: Math.floor(Math.random() * 16777214) + 1,
                     fields: [{
