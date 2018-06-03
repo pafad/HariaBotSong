@@ -30,11 +30,11 @@ exports.run = (client, message) => {
             },
             {
               name:"Amusez-vous bien !",
-              value: "Cordialement: !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨
+              value: "Cordialement: !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨"
             }],
            timestamp: new Date(),
            footer:{
-               text:"règlement by !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨
+               text:"règlement by !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨"
             }    
             }
         })
