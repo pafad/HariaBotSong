@@ -116,7 +116,7 @@ bot.on("message", message => {
 	botconnected(message, bot);
 	botmessage(message, bot);
 	help(message, bot);
-	Rainbow(message, bot)
+	Rainbow(message, bot);
 	helpaudio(message, bot);
 	join(message, bot);
 	srvdiscord(message, bot);
