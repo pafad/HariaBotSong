@@ -1,8 +1,6 @@
 function audio(bot) {
 	const fs = require('fs');
         const yt = require("ytdl-core");
-	yt('http://www.youtube.com/watch?v=A02s8omM_hI')
-        .pipe(fs.createWriteStream('video.flv'));
 	var search = require("youtube-search");
 	var request = require("request");
 	var opts = {
@@ -66,6 +64,26 @@ function audio(bot) {
 					});
 				});
 			})(queue[msg.guild.id].songs.shift());
+		},
+		
+		'stop': (msg) => {
+			msg.channel.send("Suppression de la playlist et déconnexion du canal vocal").then(() => {dispatcher.end();});
+			
+			(function stop(song) {
+				dispatcher.on("end", () => {
+					collector.stop();
+					stop(queue[msg.guild.id].songs.destroy());
+				});
+
+				dispatcher.on("error", (err) => {
+					return msg.channel.send('Erreur : ' + err).then(() => {
+						collector.stop();
+						stop(queue[msg.guild.id].songs.destroy());
+					});
+				});
+			})(queue[msg.guild.id].songs.destroy());
+
+			msg.member.voiceChannel.leave();
 		},
 
 		'add': (msg) => {
