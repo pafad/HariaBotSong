@@ -38,3 +38,4 @@ text: `vcs-ban`,
     return;
     }
 }
+module.exports = vcs;
