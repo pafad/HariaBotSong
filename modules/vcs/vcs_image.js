@@ -1,4 +1,4 @@
-fonction vcs-image(bot, message) {
+fonction vcs_image(bot, message) {
     var args = message.content.split(" ")
     if(!message.guild.channels.exists("name", "vcs")){
         message.channel.send("je n'ai pas trouvé de channel nommé `vcs` fait vcs-add pour en créer un.")
