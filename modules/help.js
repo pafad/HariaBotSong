@@ -16,7 +16,7 @@ function help (message, bot, prefix){
 					":white_check_mark:h$say : Faire parler le bot.\n" +
 					":white_check_mark:h$botconnected : Pour savoir si le bot est connecté.\n" +
 					":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n"
-                                        ":white_check_mark:h$ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n\n" +
+                                        ":white_check_mark:h$vcs : Chat virtuelle pour comuniqué entre serveur sans pouvoir si rendre.\n\n" +
 					"**Commandes modérateur :**\n\n" +
 					":white_check_mark:h$ban : Cette commande c'est pour ban un utilisateur.\n" +
 					":white_check_mark:h$kick : Cette commande c'est pour kicker un utilisateur.\n" +
