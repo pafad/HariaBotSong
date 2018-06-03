@@ -24,3 +24,4 @@ function vcs_help(bot, message) {
         }
     }})
 }
+module.exports = vcs;
