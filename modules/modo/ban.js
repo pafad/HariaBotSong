@@ -1,32 +1,41 @@
-function ban(message, bot) {
-	if (message.content.startsWith("h$ban")) {
-		let raison = message.content.substr(28);
-        let banMember = message.guild.member(message.mentions.users.first());
-        if(!message.member.hasPermissions("BAN_MEMBERS")){
-            message.channel.send(`:x: ${message.author} Tu n'as pas la permission de ban les membres.`)
-            return;
-        }else{
-            if(!banMember){
-                message.channel.send(`:x: ${message.author} veuillez mentionner un utilisateur à ban.`)
-                return;
+function ban(message, prefix, client) {
+    if(message.content.startsWith(prefix + "ban")) {
+        // ---- Les droits nécéssaires à la commande ---- //
+        let myrole = message.guild.member(client.user).hasPermission("KICK_MEMBERS"); // Récupération des droits nécéssaire du bot
+        let yourole = message.guild.member(message.author).hasPermission("KICK_MEMBERS"); // Récupération des droits nécéssaire du membre
 
-          }else{
-              if(!banMember.bannable){
-                  message.channel.send(`:x: ${message.author} je peux pas kick cet utilisateur veuillez vérifier mes rôles et permissions.`)
-                  return;
-            }else{
-                if(banMember.hasPermission("ADMINISTRATOR")){
-                    message.channel.send(`:x: ${message.author} cet utilisateur est un admin, je peux pas faire ça.`)
-                    return; 
-                }else{
-        message.delete(message.author);
-        message.guild.member(banMember).ban({reason: `${raison}`});
-        message.channel.sendMessage(`${banMember} a été ban! raison:${raison}`);
-                }
+        if (!myrole) { 
+            return message.author.send("Je n'ai pas les permissions nécessaires pour bannir un utilisateur");
+        }
+
+        if (!yourole) {
+            return message.author.send("Vous n'avez pas les permissions nécessaires");
+        }
+
+        var logs = message.guild.channels.find("name", "mod-log");
+        var bienv = message.guild.channels.find("name", "general");
+        // ---- Pour les malins ---- //
+        var report = message.member.id;
+        if(!message.mentions.users.first()) return message.channel.send("La commande est : " + prefix + "ban + @<utilisateur> + <raison>");
+        var member = message.mentions.users.first();
+        var reason = message.content.split(" ").slice(2).join(" ");
+        if(!reason) reason = "Raison non disponible";
+        if(!message.guild.members.get(member.id).bannable) return message.channel.send("L'utilisateur ne peut pas être banni");
+        message.guild.members.get(member.id).ban();
+        logs.send({
+            embed: {
+                title: "Gestion des bans/kicks/mute",
+                color: 0xFF0000,
+                fields: [{
+                    name: '_ _',
+                    value: '_ _'
+                },{
+                    name: "Ban de " + member.tag + " par " + message.author.tag,
+                    value: "Raison : " + reason
+                }]
             }
-          }
-	   }
-	}
+        });
+    }
 }
 
 module.exports = ban;

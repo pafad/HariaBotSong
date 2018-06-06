@@ -1,9 +1,9 @@
-function vcs(message, bot) {
-    if(message.content === "h$vcs") {
+function vcs(message, prefix, client) {
+    if(message.content.startsWith(prefix + "vcs")) {
         if(message.channel.type === "dm") return;
         
         if(!message.guild.channels.exists("name", "haria-vcs")) {
-            message.channel.send("Je n'ai pas trouvé de channel nommé `haria-vcs` fait h$vcsadd pour en créer un.");
+            message.channel.send("Je n'ai pas trouvé de channel nommé `haria-vcs`. Faites "+ prefix +"vcsadd pour en créer un.");
             return;
         } else {
             if(message.channel.name !== "haria-vcs") {
@@ -11,7 +11,7 @@ function vcs(message, bot) {
             } else {
                 console.log(message.content.split(" "));
 
-                bot.channels.findAll("name", "haria-vcs").map(c => c.send({
+                client.channels.findAll("name", "haria-vcs").map(c => c.send({
                     embed: {
                         color: Math.floor(Math.random() * 16777214) + 1,
                         thumbnail: { 

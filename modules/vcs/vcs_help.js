@@ -1,29 +1,29 @@
-function vcs_help(message, bot) {
-    if(message.content === "h$vcshelp") {
+function vcs_help(message, prefix, client) {
+    if(message.content.startsWith(prefix + "vcshelp")) {
         message.channel.send({
             embed: {
                 color: Math.floor(Math.random() * 16777214) + 1,
                 title: "Commandes de vcs",
                 fields: [{
-                    name: "h$vcs <texte>",
+                    name: prefix + "vcs <texte>",
                     value: "Pour envoyer une message pour tous les channels `vcs`"
                 },
                 {
-                    name: "h$vcsimage",
+                    name: prefix + "vcsimage",
                     value: "Pour partager une image dans les channels `vcs`"
                 },
                 {
-                    name: "h$vcsregles",
+                    name: prefix + "vcsregles",
                     value: "Règlement du vcs"
                 },
                 {
-                    name: "h$vcsban",
+                    name: prefix + "vcsban",
                     value: "Pour ban quelqu'un du vcs (uniquement modo !)"  
                 }],
                 timestamp: new Date(),
                 footer: {
                     text: "vcshelp by !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨",
-                    icon_url: bot.user.avatarURL
+                    icon_url: client.user.avatarURL
                 }
             }
         })

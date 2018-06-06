@@ -1,5 +1,5 @@
-function vcs_regles(message, bot) {
-    if(message.content === "h$vcsregles") {
+function vcs_regles(message, prefix, client) {
+    if(message.content.startsWith(prefix + "vcsregles")) {
         if(message.channel.name !== "haria-vcs") {
             return;
         } else {
@@ -11,32 +11,32 @@ function vcs_regles(message, bot) {
                         value: "Salut à vous utilisateurs du vcs. Voici un petit règlement à suivre."
                     },
                     {
-                        name:":gear: -> Règle 1:",
-                        value:"Ne spammez pas les vcs."
+                        name: ":gear: -> Règle 1 :",
+                        value: "Ne spammez pas les vcs."
                     },
                     {
-                       name:":gear: -> Règle 2:",
-                       value:"Ne faites pas votre pub dans les vcs c'est pas fait pour ça."
+                        name: ":gear: -> Règle 2 :",
+                        value: "Ne faites pas votre pub dans les vcs c'est pas fait pour ça."
                     },
                     {
-                        name:":gear: -> Règle 3:",
-                        value:"Insultez pas dans les vcs."
+                        name: ":gear: -> Règle 3 :",
+                        value: "Insultez pas dans les vcs."
                     },
                     {
-                        name:":gear: -> Règle 4:",
-                        value:"Ne mettez pas de contenu pornographique ou gore dans la commande vcs-image."
+                        name: ":gear: -> Règle 4 :",
+                        value: "Ne mettez pas de contenu pornographique ou gore dans la commande vcs-image."
                     },
                     {
-                        name:":gear: -> Règle 5:",
-                        value:"Toute formes de rascime y sont interdit."
+                        name: ":gear: -> Règle 5 :",
+                        value: "Toute forme de rascime y sont interdit."
                     },
                     {
-                      name:"Amusez-vous bien !",
-                      value: "Cordialement: !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨"
+                        name: "Amusez-vous bien !",
+                        value: "Cordialement: !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨"
                     }],
                     timestamp: new Date(),
                     footer: {
-                        text:"Règlement by !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨"
+                        text: "Règlement par !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨"
                     }    
                 }
             })

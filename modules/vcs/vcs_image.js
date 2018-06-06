@@ -1,15 +1,15 @@
-function vcs_image(message, bot) {
-    if(message.content === "h$vcsimage") {
+function vcs_image(message, prefix, client) {
+    if(message.content.startsWith(prefix + "vcsimage")) {
         var args = message.content.split(" ");
         
         if(!message.guild.channels.exists("name", "haria-vcs")) {
-            message.channel.send("Je n'ai pas trouvé de channel nommé `haria-vcs` fait h$vcsadd pour en créer un.");
+            message.channel.send("Je n'ai pas trouvé de channel nommé `haria-vcs`. Faites "+ prefix +"vcsadd pour en créer un.");
             return;
         } else {
             if(message.channel.name !== "haria-vcs") {
                 return;
             } else {
-                bot.channels.findAll("name", "haria-vcs").map(c => c.send({
+                client.channels.findAll("name", "haria-vcs").map(c => c.send({
                     embed: {
                         color: Math.floor(Math.random() * 16777214) + 1,  
                         thumbnail: { 

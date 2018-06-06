@@ -1,5 +1,5 @@
-function vcs_ban(message, bot) {
-    if(message.content === "h$vcsban") {
+function vcs_ban(message, prefix, client) {
+    if(message.content.startsWith(prefix + "vcsban")) {
         const request = require("request");
         const fs = require("fs");
         const superagent = require("superagent");
@@ -19,13 +19,13 @@ function vcs_ban(message, bot) {
                 var objet = JSON.parse(body);
                 objet[args] = {};
 
-                request({ url: url, method: 'PUT', json: objet});
-                bot.channels.findAll('name', 'haria-vcs').map(c => c.send('', {
+                request({ url: url, method: 'PUT', json: objet });
+                client.channels.findAll('name', 'haria-vcs').map(c => c.send('', {
                     embed: {
                         color: Math.floor(Math.random() * 16777214) + 1,
                         fields: [{
                             name:':gear: -> Bannissement du vcs',
-                            value:`${message.author.tag} a banni: ${args} du vcs`
+                            value:`${message.author.tag} a banni ${args} du vcs`
                         },
                         {
                             name: `Depuis le serveur : ${message.guild.name}`,
