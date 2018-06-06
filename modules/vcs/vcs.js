@@ -19,7 +19,7 @@ function vcs(message, prefix, client) {
                         }, 
                         fields: [{
                             name: `${message.author.tag} (${message.author.id})`,
-                            value: message.content.split(" ")[1]
+                            value: message.content.substr(6)
                         },
                         { 
                             name: ":gear: -> Serveur :",
