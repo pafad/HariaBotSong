@@ -9,8 +9,6 @@ function vcs(message, prefix, client) {
             if(message.channel.name !== "haria-vcs") {
                 return;
             } else {
-                console.log(message.content.split(" "));
-
                 client.channels.findAll("name", "haria-vcs").map(c => c.send({
                     embed: {
                         color: Math.floor(Math.random() * 16777214) + 1,
