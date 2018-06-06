@@ -16,7 +16,7 @@ function vcs_image(message, prefix, client) {
                             url: message.author.avatarURL 
                         }, 
                         image: {
-                            url: message.content.substr(10)
+                            url: message.content.substr(11)
                         },                                                              
                         fields:[{
                             name: ":gear: -> Serveur :",
