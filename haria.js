@@ -117,7 +117,6 @@ const srvdiscord = require("./modules/other/srvdiscord.js");
  */
 const annonce = require("./modules/owner/annonce.js");
 const botmessage = require("./modules/owner/botmessage.js");
-const evalcmd = require("./modules/owner/evalcmd.js");
 const die = require("./modules/owner/die.js");
 const botconnected = require("./modules/owner/botconnected.js");
 
@@ -155,7 +154,6 @@ client.on("message", message => {
 	srvdiscord(message, prefix, client);
 	annonce(message, prefix, client);
 	botmessage(message, prefix, client);
-	evalcmd(message, prefix, client, process.env.Discord_token || process.argv[2]);
 	die(message, prefix, client);
 	botconnected(message, prefix, client);
 	say(message, prefix, client);
