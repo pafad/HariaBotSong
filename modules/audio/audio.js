@@ -2,7 +2,8 @@ function audio(client) {
 	const YouTube = require("simple-youtube-api");
 	const ytdl = require("ytdl-core");
 	const config = require("../../configbot.json");
-	const youtube = new YouTube(config.google_api_key);
+	// const youtube = new YouTube(config.google_api_key);
+	const youtube = new YouTube("AIzaSyDUvWCTp9NnDb2tadRVPNLyXUznJy8v99M");
 	const queue = new Map();
 
 	var servers = {};
