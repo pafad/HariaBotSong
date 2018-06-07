@@ -62,7 +62,7 @@ client.on("ready", () => {
 
 		let games = [prefix + `help | `+ client.guilds.size +` serveur(s) avec `+ client.users.size +` utilisateur(s) connecté(s) au total`, `Pour l'inviter, taper `+ prefix +`join`, 
 		`Préfixe (prefix) : ` + prefix + ``, `${client.user.tag} est un bot multifonction crée par !✨⌖αɓςϯɾαɕƘ-δαɾƘ⌖✨`, `Version 2.0.0`, 
-		`Vous voulez avoir des infos sur le bot ? Taper `+ prefix +`infos`, `Besoin de savoir les commandes disponible ? Taper `+ prefix +`help`];
+		`Besoin de savoir les commandes disponible ? Taper `+ prefix +`help`];
 		setInterval(() => {
 			client.user.setActivity(games[Math.floor(Math.random() * games.length)], {url: "https://twitch.tv/hariamane", type: "STREAMING"})
 		},20000);
