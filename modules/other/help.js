@@ -15,30 +15,30 @@ function help(message, prefix, client) {
 				color: 0xFF0000,
 				description:
 				"**Commandes utiles :**\n" +
-				":white_check_mark:"+ prefix +"annonce : Permet de faire un annonce dans son propre serveur.\n" +
-				":white_check_mark:"+ prefix +"afk : si vous êtes indisponible.\n"+
-				":white_check_mark:"+ prefix +"botmessage : Cette commande est réservé au développeur.\n" +
-				":white_check_mark:"+ prefix +"join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n" +
-				":white_check_mark:"+ prefix +"discord : Cette commande te permet de me rejoindre.\n" +
-				":white_check_mark:"+ prefix +"support : Cette commande te permet de contacter le support technique du bot.\n\n" +
+				":white_check_mark: "+ prefix +"annonce : Permet de faire un annonce dans son propre serveur.\n" +
+				":white_check_mark: "+ prefix +"afk : Si vous êtes indisponible.\n"+
+				":white_check_mark: "+ prefix +"botmessage : Cette commande est réservé au développeur.\n" +
+				":white_check_mark: "+ prefix +"join : Cette commande te permet d'ajouter ce bot dans ton serveur.\n" +
+				":white_check_mark: "+ prefix +"discord : Cette commande te permet de me rejoindre.\n" +
+				":white_check_mark: "+ prefix +"support : Cette commande te permet de contacter le support technique du bot.\n\n" +
 				"**Autres commandes :**\n"+
 				":x:h$mp : Envoyer un message privé a quelqu'un.\n" +
-				":white_check_mark:"+ prefix +"rainbow : Demander un rainbow pour son serveur.\n" +
-				":white_check_mark:"+ prefix +"say : Faire parler le bot.\n" +
-				":white_check_mark:"+ prefix +"botconnected : Pour savoir si le bot est connecté.\n" +
-				":white_check_mark:"+ prefix +"ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n" +
-				":white_check_mark:"+ prefix +"vcs : Chat virtuel pour comuniquer entre serveur sans pouvoir s'y rendre.\n\n" +
+				":white_check_mark: "+ prefix +"rainbow : Demander un rainbow pour son serveur.\n" +
+				":white_check_mark: "+ prefix +"say : Faire parler le bot.\n" +
+				":white_check_mark: "+ prefix +"botconnected : Pour savoir si le bot est connecté.\n" +
+				":white_check_mark: "+ prefix +"ping : Renvoie pong avec le temps écoulé en ms (millisecondes).\n" +
+				":white_check_mark: "+ prefix +"vcs : Chat virtuel pour comuniquer entre serveur sans pouvoir s'y rendre.\n\n" +
 				"**Commandes modérateur :**\n" +
-				":white_check_mark:"+ prefix +"ban : Cette commande c'est pour ban un utilisateur.\n" +
-				":white_check_mark:"+ prefix +"kick : Cette commande c'est pour kicker un utilisateur.\n" +
-				":white_check_mark:"+ prefix +"mute : Cette commande c'est pour mute les gens en texte.\n" +
-				":white_check_mark:"+ prefix +"purge : Cette commande c'est pour effacers des messages en un coup en mettant la valeurs.\n\n" +
+				":white_check_mark: "+ prefix +"ban : Cette commande c'est pour ban un utilisateur.\n" +
+				":white_check_mark: "+ prefix +"kick : Cette commande c'est pour kicker un utilisateur.\n" +
+				":white_check_mark: "+ prefix +"mute : Cette commande c'est pour mute les gens en texte.\n" +
+				":white_check_mark: "+ prefix +"purge : Cette commande c'est pour effacer des messages en un coup en mettant la valeur.\n\n" +
 				"**Commandes radio :**\n" +
-				":white_check_mark:"+ prefix +"webradioplay <flux_radio> : Pour écouter de la radio.\n" +
-				":white_check_mark:"+ prefix +"webradiostop : Pour stopper la radio.\n\n" +
+				":white_check_mark: "+ prefix +"webradioplay <flux_radio> : Pour écouter de la radio.\n" +
+				":white_check_mark: "+ prefix +"webradiostop : Pour stopper la radio.\n\n" +
 				"**Commandes audio :**\n" +
-				":white_check_mark:"+ prefix +"helpaudio: Listes des commandes audio (MP).\n" +
-				":white_check_mark:"+ prefix +"helpaudioici: Listes des commandes audio (serveur)."
+				":white_check_mark: "+ prefix +"audiohelp : Listes des commandes audio (MP).\n" +
+				":white_check_mark: "+ prefix +"audioherehelp : Listes des commandes audio (serveur)."
 			}
 		});
 	}
