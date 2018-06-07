@@ -1,5 +1,5 @@
 function helpici(message, prefix, client) {
-	if (message.content.startsWith(prefix + "helpici")) {
+	if (message.content.startsWith(prefix + "herehelp")) {
 		message.channel.send({
 			embed: {
 				footer: {
