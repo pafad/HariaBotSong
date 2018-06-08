@@ -1,4 +1,4 @@
-exports.run = (client, message, args) => {
+function (client, message, args) => {
      if(message.author.id !== "306119836503900161"){
     message.channel.send(`<:7orNad0_negative_check_mark:400045843287375873> Tu n'es pas mon developpeur.`)
     return;
