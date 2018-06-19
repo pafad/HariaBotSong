@@ -9,6 +9,8 @@ function vcs(message, prefix, client) {
             if(message.channel.name !== "haria-vcs") {
                 return;
             } else {
+                var message_vcs = message.content.substr(6);
+                
                 client.channels.findAll("name", "haria-vcs").map(c => c.send({
                     embed: {
                         color: Math.floor(Math.random() * 16777214) + 1,
@@ -17,7 +19,7 @@ function vcs(message, prefix, client) {
                         }, 
                         fields: [{
                             name: `${message.author.tag} (${message.author.id})`,
-                            value: message.content.substr(6)
+                            value: message_vcs
                         },
                         { 
                             name: ":gear: -> Serveur :",
@@ -29,6 +31,8 @@ function vcs(message, prefix, client) {
                         }
                     } 
                 }))
+                
+                message.delete(message_vcs);
             }
         }
     }
